@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 — Research, Business Language &amp; Scale | UX Mastery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/week.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">UX<span>Mastery</span></a>
+    <nav class="site-nav">
+      <a href="index.html"       class="nav-link">Dashboard</a>
+      <a href="week1.html"       class="nav-link">Week 1</a>
+      <a href="week2.html"       class="nav-link">Week 2</a>
+      <a href="week3.html"       class="nav-link active">Week 3</a>
+      <a href="week4.html"       class="nav-link">Week 4</a>
+      <a href="assignments.html" class="nav-link">Assignments</a>
+      <a href="references.html"  class="nav-link">Reference</a>
+    </nav>
+    <div class="header-right">
+      <span class="progress-pill" id="progress-pill">Day 1 of 30</span>
+      <div class="week-dots" aria-hidden="true">
+        <span class="week-dot" id="week-dot-1"></span>
+        <span class="week-dot" id="week-dot-2"></span>
+        <span class="week-dot" id="week-dot-3"></span>
+        <span class="week-dot" id="week-dot-4"></span>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<nav class="mobile-drawer" id="mobile-drawer">
+  <a href="index.html" class="nav-link">Dashboard</a>
+  <a href="week1.html" class="nav-link">Week 1: Human-First Foundation</a>
+  <a href="week2.html" class="nav-link">Week 2: Problem Finding &amp; Audit</a>
+  <a href="week3.html" class="nav-link">Week 3: Research, Business &amp; Scale</a>
+  <a href="week4.html" class="nav-link">Week 4: Communication &amp; Portfolio</a>
+  <a href="assignments.html" class="nav-link">Assignment Bank</a>
+  <a href="references.html"  class="nav-link">Quick Reference</a>
+</nav>
+
+<main>
+
+<section class="week-hero" style="--week-accent:var(--week3-color)">
+  <div class="container">
+    <div class="week-hero-eyebrow">Days 15–21</div>
+    <h1 class="week-hero-title">Week 3: <span style="background:linear-gradient(135deg,#CE93D8,#9C27B0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Research, Business Language &amp; Scale</span></h1>
+    <p class="week-hero-goal">Build the practical ability to do real research without a lab, speak the language of stakeholders with confidence, and plan projects at any scale without losing clarity or quality. This is where you start to think and operate like a senior designer.</p>
+    <div class="week-progress-dots">
+      <div class="week-dot-item" data-week-dot="15"><div class="wdot"><span>15</span></div><div class="wdot-label">Day 15</div></div>
+      <div class="week-dot-item" data-week-dot="16"><div class="wdot"><span>16</span></div><div class="wdot-label">Day 16</div></div>
+      <div class="week-dot-item" data-week-dot="17"><div class="wdot"><span>17</span></div><div class="wdot-label">Day 17</div></div>
+      <div class="week-dot-item" data-week-dot="18"><div class="wdot"><span>18</span></div><div class="wdot-label">Day 18</div></div>
+      <div class="week-dot-item" data-week-dot="19"><div class="wdot"><span>19</span></div><div class="wdot-label">Day 19</div></div>
+      <div class="week-dot-item" data-week-dot="20"><div class="wdot"><span>20</span></div><div class="wdot-label">Day 20</div></div>
+      <div class="week-dot-item" data-week-dot="21"><div class="wdot wdot--integration"><span>21</span></div><div class="wdot-label">Day 21</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="week-layout container">
+
+  <!-- ══════ DAY 15 ══════ -->
+  <div class="accordion-item" data-day="15" id="day-15">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="15">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 15</span>
+          <span class="accordion-title">Lean Research — Real Insights Without Budget or Time</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-short">SHORT</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>Most junior designers think research means a 3-month formal study with 50 participants. That is not research. That is academia. Real product company research is lean, fast, and directional. 5 users will reveal 85% of your usability issues. You do not need more.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="15">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Lean Research — Real Insights Without Lab Conditions</h3>
+
+          <h4>The Research Myth</h4>
+          <p>In real product companies, research is lean, fast, and directional. Its purpose is not to produce publishable academic insights. Its purpose is to reduce the risk of shipping the wrong thing. Five users will reveal approximately 85% of usability issues in a product. Three good user interviews that reveal a shared pattern are more useful than 30 interviews that confirm what you already suspected.</p>
+
+          <hr>
+
+          <h3>5 Lean Research Methods You Will Actually Use</h3>
+
+          <h4>1. Guerrilla Testing (5-Minute User Tests)</h4>
+          <p>Give anyone — a colleague, someone in a cafe, a friend — a specific task to complete in the product. Watch without helping or guiding. Note where they hesitate, click the wrong thing, or look confused.</p>
+          <p>Opening script: "I'm going to show you this product and ask you to complete one task. There are no wrong answers — I'm testing the design, not you. Please think out loud as you go." Then: be quiet. Entirely quiet. Do not nod encouragingly. Do not help them. Every time you intervene, you corrupt the data.</p>
+
+          <h4>2. 5-Second Test</h4>
+          <p>Show someone a screen for exactly 5 seconds and then remove it. Ask: "What do you remember? What is this page about? What would you do next?" If someone cannot tell you the purpose of a screen in 5 seconds, your visual hierarchy is failing. The purpose of hierarchy is to communicate priority without effort.</p>
+
+          <h4>3. Reading Analytics as Research</h4>
+          <p>A 72% drop-off at step 3 of your onboarding flow is research. You may not know exactly why — but you know with certainty that something at step 3 is not working for 72% of users. That directional finding is enough to investigate. Look for: where do users drop off in the funnel? What features have low usage despite being prominently placed? What do search queries tell you about what users cannot find?</p>
+
+          <h4>4. Stakeholder Interviews as Research</h4>
+          <p>The most underused resource is the customer support team. They talk to frustrated users every day. They know the top 5 complaints, the exact words users use, and which features generate the most confusion. Thirty minutes with a support lead is worth hours of research.</p>
+          <p>Questions that extract real insight: "What do users love most? What frustrates them most?" "What is the most common reason for a support ticket?" "What would you fix first if you could fix anything tomorrow?"</p>
+
+          <h4>5. Heatmaps and Session Recordings</h4>
+          <p>Hotjar (free tier) and Microsoft Clarity (fully free) automatically track where users click, how far they scroll, and record sessions of real users navigating the product. They reveal the gap between where you designed for clicks and where users actually click. The pages where users rage-click (fast repeated clicking) are strong signals of frustration.</p>
+
+          <hr>
+
+          <h3>How to Present Lean Research Without Apologizing for It</h3>
+          <p><strong>Wrong:</strong> "We didn't have time for proper research, so we just did a quick test with 5 people."</p>
+          <p><strong>Right:</strong> "I ran usability sessions with 5 representative users and identified 3 critical friction points in the flow. Research consistently shows that 5 users surface the majority of usability issues, so this gives us high-confidence direction to proceed."</p>
+          <p>The difference: the wrong version frames lean research as inferior. The right version presents it as a professional, deliberate choice informed by research methodology.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="15">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Today you will do a real 5-second test on your own portfolio or an existing project. Choose one screen and show it to 3 different people for exactly 5 seconds each. After the 5 seconds, ask: What is this page about? What would you do next? What did you notice first? What felt confusing?</p>
+          <p>Write every response verbatim. After all 3 tests, synthesize: what did all 3 agree on? What surprised you?</p>
+          <p>Remaining time: write the 5 interview questions you would use with one of your target users. Each question must uncover emotional behavior, not feature preferences. "What do you do when you can't find something in the system?" is a better question than "What features do you want?"</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-short">SHORT</span>
+          <span class="badge badge-duration">1–3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="15" data-assignment-id="short-7">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Design a lean research plan. Scenario: You are joining a new company in your first week. The PM says "we're planning to redesign the employee onboarding flow. Can you do some research before we start?" You have 3 days.</p>
+          <ol>
+            <li>Which 2 lean research methods would you use?</li>
+            <li>Who would you talk to? (Specific types — not "users" but "new employees who joined in the last 3 months")</li>
+            <li>What are your 5 interview questions?</li>
+            <li>What would tell you your hypothesis is CORRECT?</li>
+            <li>What would tell you your hypothesis is WRONG? (This second question is critical — most juniors never ask it)</li>
+            <li>What would you present to the PM on Day 3?</li>
+          </ol>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (3h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="15">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">Have you ever done real research — talking to actual users, watching real people use a product? If not, plan to do it this week on any app. Watch one person use Swiggy for 5 minutes without helping them. You will see 3 usability problems in 5 minutes that no heuristic audit would have found.</p>
+        <textarea class="reflection-textarea" data-reflection-day="15" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Doing imperfect, lean research that gives you directional insights you can act on within a week.</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Skipping research because "we don't have time" or doing fake research (showing your design to one colleague and calling it a "usability test"). Both lead to the same outcome: designs that feel right but don't work for real users.</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-15 -->
+
+  <!-- ══════ DAY 16 ══════ -->
+  <div class="accordion-item" data-day="16" id="day-16">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="16">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 16</span>
+          <span class="accordion-title">Research Ethics — The Danger of "Users Said So"</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-medium">MEDIUM</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>Research is to understand root causes, not to justify ideas you already have. The most dangerous phrase in UX design is "users said they want this." It sounds like research. It is actually a way of avoiding responsibility for your design decisions.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="16">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Research Ethics — The "Users Said So" Danger Zone</h3>
+
+          <h4>The Dangerous Practice of Justifying Solutions with Users</h4>
+          <p>There is a failure mode in design research that looks like good practice but is actually self-deception: you have a design solution you want to build, you interview users and ask questions until you find ones who validate your solution, then you say "users said they want this." This is not research. It is confirmation bias with user quotes attached.</p>
+          <p>Real research starts with curiosity about the problem, not confidence about the solution. <strong>If your research process is incapable of telling you "actually, you are solving the wrong problem" — it is not research.</strong></p>
+
+          <hr>
+
+          <h3>The Real Danger in Interviews</h3>
+          <p>When a designer says "users said they want [X]" in a design review, a senior PM hears one of two things:</p>
+          <ul>
+            <li>If the questions were open-ended and exploratory: "This designer uncovered a real user need through proper research."</li>
+            <li>If the questions were leading or closed: "This designer asked users whether they would like something and they said yes. Of course they said yes — people say yes to almost everything in interviews. This designer is using 'user input' to justify a decision they already made."</li>
+          </ul>
+
+          <hr>
+
+          <h3>Designing FOR Users vs. Designing BECAUSE OF Users</h3>
+          <p>You are not designing what users ask for. You are designing what will address the underlying need that their requests reveal.</p>
+          <p>Users who say "I want a search bar" are not necessarily right that a search bar is the solution. They are definitely right that they cannot find what they need. The search bar might be the right solution. Navigation redesign might be better. Contextual recommendations might serve the need more elegantly. <strong>Your job is to understand the need and design the best solution — not to execute the request.</strong></p>
+          <blockquote>A doctor does not prescribe whatever the patient asks for. A doctor hears the patient's symptoms and uses their expertise to diagnose the actual problem. You are the design doctor. User input is symptom data. Design decisions are your prescription.</blockquote>
+          <p>When you present research findings to stakeholders, lead with the behavioral observation and the emotion behind it — not the feature request. "Users are spending significantly more time on the date filter than on any other filter, and we observe them frequently changing and re-selecting it, which suggests the default date range does not match what they actually want." Not: "Users asked for better date filtering."</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="16">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Take your ESOP project or any HR tech project. Write the story of your research (if you did research). For each user insight you used, apply the "real vs. stated" filter and write:</p>
+          <ul>
+            <li>What the user literally said</li>
+            <li>What you think they actually meant (the emotion underneath)</li>
+            <li>How your design addressed the emotion, not just the words</li>
+            <li>Whether your design would have been different if you had addressed the stated vs. the real insight</li>
+          </ul>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-duration">4–6 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="16" data-assignment-id="medium-7">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>You are designing a feature to help ESOP grant admins send reminders to employees who haven't acknowledged their grant documents. You interview 5 users and they all say: <em>"We want an automated email reminder system."</em></p>
+          <ol>
+            <li>What is the literal stated want?</li>
+            <li>What are 3 possible real needs underneath that want?</li>
+            <li>For each real need, write what the ideal design would be (they may be very different from "automated email reminders")</li>
+            <li>Which of the 3 real needs would you investigate further? How?</li>
+            <li>What 2 follow-up questions would you ask the same users to get to the root?</li>
+          </ol>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (4h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="16">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">Think about a time when you built something someone asked for and it still didn't solve the problem. That gap between "what they asked for" and "what they needed" is the core challenge of UX design. Write about that gap from your own experience.</p>
+        <textarea class="reflection-textarea" data-reflection-day="16" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Treating user requests as clues to investigate, not specifications to execute.</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>The reverse is also wrong: ignoring what users say entirely and relying only on your own instinct. Both extremes fail. The right answer is: listen carefully, find the real need, design for that.</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-16 -->
+
+  <!-- ══════ DAY 17 ══════ -->
+  <div class="accordion-item" data-day="17" id="day-17">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="17">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 17</span>
+          <span class="accordion-title">Business Language Toolkit — How to Talk to PMs and Stakeholders</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-short">SHORT</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>The reason most designers feel like they are not taken seriously in meetings is not because their designs are bad. It is because they are speaking a different language. Learn to speak business — not by abandoning design thinking, but by translating it.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="17">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Business Language Toolkit</h3>
+
+          <h4>Why Language Changes Your Role</h4>
+          <p>The language you use in meetings determines what role people assume you occupy. Designers who speak in aesthetic and process language ("I made this more visually balanced") are perceived as execution resources. Designers who speak in business and outcomes language ("this change should reduce the completion time for the primary task by approximately 30%, which directly affects our activation rate") are perceived as strategic partners.</p>
+
+          <hr>
+
+          <h3>The KPI Question — The Most Important Question in Your Career</h3>
+          <p>When a PM or stakeholder brings you any brief, ask one question before anything else: "What business metric is this trying to move?" This question does four things simultaneously:</p>
+          <ol>
+            <li>Communicates that you understand design work has commercial purpose</li>
+            <li>Gives you the information you need to make decisions aligned with what actually matters</li>
+            <li>Often surfaces misalignment between what the PM thinks the metric is and what it actually is</li>
+            <li>Creates a shared success criterion — when the design ships, you both have an agreed metric to measure against</li>
+          </ol>
+
+          <hr>
+
+          <h3>The Design Decision Communication Framework</h3>
+          <blockquote>"The user problem is [specific emotional or behavioral problem]. Our business goal is to [specific metric impact]. My design addresses this by [specific design decision]. The alternative I considered was [competing approach], but it carries the risk of [specific downside]. If this design works as intended, we should see [measurable change] in [specific metric]. I'd recommend measuring [what] to validate it."</blockquote>
+
+          <hr>
+
+          <h3>Phrases That Kill Your Credibility — and Their Replacements</h3>
+
+          <div class="scale-cards">
+            <div class="scale-card">
+              <div class="scale-card-title">❌ "It's a better user experience"</div>
+              <div class="scale-card-content">✅ "This reduces the number of steps to the primary action from 4 to 2, which should improve completion rate at this step."</div>
+            </div>
+            <div class="scale-card">
+              <div class="scale-card-title">❌ "I think users will like this"</div>
+              <div class="scale-card-content">✅ "In guerrilla testing with 5 users, all 5 completed the task in under 2 minutes without hesitation at the previous friction point."</div>
+            </div>
+            <div class="scale-card">
+              <div class="scale-card-title">❌ "It looks cleaner"</div>
+              <div class="scale-card-content">✅ "Reducing the visual elements eliminates 3 competing calls-to-action, which should focus user attention on the primary conversion action."</div>
+            </div>
+            <div class="scale-card">
+              <div class="scale-card-title">❌ "The feedback was good"</div>
+              <div class="scale-card-content">✅ "In usability testing, 4 of 5 users completed the onboarding flow without external help, compared to 2 of 5 on the previous version."</div>
+            </div>
+          </div>
+
+          <hr>
+
+          <h3>Speaking About Trade-offs — The Senior Signal</h3>
+          <p>One of the clearest signals that you are thinking at a senior level is your ability to articulate trade-offs in your design decisions. Every design decision is a trade-off.</p>
+          <p>Junior designers present decisions as if they are unambiguously correct. Senior designers present decisions as the best available option among trade-offs: "I chose to use a modal for this confirmation instead of a full-page flow because it keeps users in context and reduces navigation steps. The trade-off is that modals can be disruptive on mobile. To mitigate this, I've designed the modal to be dismissible with a clear secondary action, and I'd recommend we A/B test both approaches when it ships."</p>
+          <p>The A/B test mention is not weakness. It is professional maturity. You are saying "I have a well-reasoned hypothesis and I want to generate real evidence to validate or refine it."</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="17">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Simulate 3 different stakeholder conversations. Write these out as realistic dialogues:</p>
+          <div class="practice-phase"><div class="practice-phase-num">Conversation 1</div><p>PM gives a vague brief ("make the dashboard better"). Write the full conversation — how you redirect to business metrics, what questions you ask, and what you agree to deliver.</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Conversation 2</div><p>PM pushes back on your recommendation ("we don't have time, just make the button bigger"). Write how you acknowledge their constraint, explain the risk, and propose a middle path.</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Conversation 3</div><p>You are presenting a completed design and a senior stakeholder says "I don't think users will use this." Write how you respond using research + rationale + metric, not defensiveness.</p></div>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-short">SHORT</span>
+          <span class="badge badge-duration">1–3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="17" data-assignment-id="short-8">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Write your personal "business language cheat sheet" — 10 phrases you will use in your first 3 months at a new company. Each phrase should:</p>
+          <ul>
+            <li>Replace a vague or defensive design-speak phrase</li>
+            <li>Use business language clearly</li>
+            <li>Not sound robotic or forced</li>
+          </ul>
+          <p>Write 10 of these translations for your specific context (HR tech or product company).</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (3h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="17">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">Think about a moment in your previous job where you felt your design was rejected or dismissed. Rewrite how that conversation could have gone if you had framed your recommendation in business language. Be specific.</p>
+        <textarea class="reflection-textarea" data-reflection-day="17" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Entering every stakeholder conversation with the metric in mind. "This design should move [metric] by [mechanism]."</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Defending your design by saying "it's a better user experience." That sentence has no weight in a business meeting because it cannot be measured or disputed. It sounds like opinion, not evidence.</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-17 -->
+
+  <!-- ══════ DAY 18 ══════ -->
+  <div class="accordion-item" data-day="18" id="day-18">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="18">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 18</span>
+          <span class="accordion-title">The Design Rationale Formula — Deep Practice</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-medium">MEDIUM</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>The design rationale formula is not a writing exercise. It is a way of thinking. If you cannot complete the formula for a decision, it means you made the decision without fully understanding it. The formula forces clarity.</p>
+        <blockquote style="margin-top:var(--space-4)">"I chose [X] because [user need], supported by [evidence/principle]. The alternative was [Y] but it has [trade-off]. The expected outcome is [Z metric impact]."</blockquote>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="18">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Design Rationale — Deep Practice</h3>
+
+          <h4>Rationale as a Thinking Tool, Not Just Communication</h4>
+          <p>When you cannot complete the formula for a decision you made, it is a signal that you made the decision without fully understanding it.</p>
+          <p>"I chose [X]..." — can you name the specific decision? If you cannot describe it precisely in one sentence, it may be that the decision is actually multiple decisions bundled together.</p>
+          <p>"...because [user need/pain point]..." — "Because it's better UX" is not a user need. "Because users who arrive on this page from an email link have already expressed intent to purchase and do not need the full awareness-building content that first-time visitors need" is a user need.</p>
+          <p>"...supported by [evidence or principle]..." — if this field is blank, your decision is an opinion. Opinions can be right, but they cannot be defended in a review meeting.</p>
+          <p>"...the alternative was [Y] but it has [trade-off]..." — if you cannot name an alternative you genuinely considered, either the decision was trivially obvious or you did not explore enough.</p>
+          <p>"...the expected outcome is [Z]..." — if you cannot connect this decision to a behavioral or metric outcome, the decision may not be meaningfully connected to the product's goals.</p>
+
+          <hr>
+
+          <h3>The Confidence-Uncertainty Balance</h3>
+          <p><strong>"This will improve conversion"</strong> — sounds certain. Dismissable if the PM has any doubt.</p>
+          <p><strong>"Based on [evidence], I expect this to improve conversion at this step. I'd recommend we validate with an A/B test after shipping."</strong> — sounds confident and epistemically honest. This invites collaboration rather than demanding acceptance.</p>
+          <p>The A/B test mention is not weakness. You are saying "I have a well-reasoned hypothesis and I want to generate real evidence to validate or refine it." That is how senior designers talk.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="18">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Go back to your 5 design decisions from Day 5. Write each one using the formula again — but this time, add two more elements:</p>
+          <ul>
+            <li>One thing that would have changed your decision (what evidence would have made you choose the alternative?)</li>
+            <li>One question you would ask before the design ships (what do you still not know?)</li>
+          </ul>
+          <p>This is senior-level thinking. Junior designers write rationale for decisions they've already made. Senior designers write rationale that acknowledges the limits of their own knowledge.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-duration">4–6 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="18" data-assignment-id="medium-8">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Take one design decision from your current ESOP case study. Write:</p>
+          <ol>
+            <li>The rationale using the full formula (3–4 sentences)</li>
+            <li>The alternative you considered and why you rejected it</li>
+            <li>What you were uncertain about and how you handled the uncertainty</li>
+            <li>What you would do differently if you were starting over</li>
+            <li>How you would present this decision in a 60-second verbal explanation</li>
+          </ol>
+          <p>Practice reading the 60-second verbal explanation out loud 3 times. Record yourself on the third time. Listen back. Notice: do you start with the user or with the screen?</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (4h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="18">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">The decisions that are hardest to write rationale for are the ones you made on feel rather than evidence. These are not necessarily bad decisions — experienced designers make great intuition-based decisions. But you need to be able to reconstruct the reasoning, because in interviews and design reviews, "it felt right" is not a defensible answer.</p>
+        <textarea class="reflection-textarea" data-reflection-day="18" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Treating every design decision as a hypothesis that you can explain and potentially be wrong about.</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Writing rationale that sounds confident but is actually circular. "I chose this layout because it works better for users" is not a rationale. It is a restatement of the goal, not an explanation of the decision.</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-18 -->
+
+  <!-- ══════ DAY 19 ══════ -->
+  <div class="accordion-item" data-day="19" id="day-19">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="19">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 19</span>
+          <span class="accordion-title">Scale Planning Deep Dive — Your Complete Framework</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-medium">MEDIUM</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>This is the day you build your personal scale-based process framework — the one you will pull out every time a PM gives you a new task, so you can immediately know how to approach it. The key difference between scales is not just time — it is how much you can afford to be wrong.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="19">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Scale Planning — Your Complete Framework</h3>
+
+          <h4>The Core Principle</h4>
+          <p>The right design process is the one that produces the best possible outcome within real constraints. Every project has a cost-benefit trade-off between the depth of design work and the speed of getting real user feedback on a shipped product. At every scale, you are trying to reduce the risk of shipping the wrong thing — while spending no more time on pre-ship validation than is justified by the scale of the decision.</p>
+
+          <hr>
+
+          <h3>The Four-Scale Framework — Detailed</h3>
+
+          <h4>Scale 1: The 1-Day Sprint</h4>
+          <p><strong>When to use:</strong> hotfix in a live flow, rapid response to a critical stakeholder request, PM needs to show something at tomorrow's board meeting.</p>
+          <p><strong>What you always do:</strong> Ask one question before touching Figma: "What is this trying to achieve for users?" Spend 15–30 minutes on Layer 1 audit of the existing experience. Generate at minimum 3 different structural approaches. Pick one and write the 3-sentence rationale before executing in Figma. Deliver with the rationale attached — never just a file link.</p>
+          <p><strong>What you skip:</strong> Formal user research, multiple iteration rounds, edge case exploration, extensive documentation.</p>
+
+          <h4>Scale 2: The 1-Week Sprint</h4>
+          <p><strong>What you always do:</strong> Day 1: guerrilla test with 3 users + scope definition. Day 2: root cause analysis + divergent ideation. Day 3: convergent selection + lo-fi wireframes. Day 4: hi-fi design + edge cases. Day 5: documentation + presentation prep.</p>
+          <p><strong>What you skip:</strong> Formal recruitment, multiple iteration rounds. What you ADD vs. 1-day: real user input, more ideation time, proper edge case thinking.</p>
+
+          <h4>Scale 3: The 1-Month Project</h4>
+          <p>Week 1: Discovery (5 user interviews, analytics audit, stakeholder interviews, competitive analysis). Week 2: Problem definition + full ideation sprint + architecture mapping (story-first). Week 3: Iterative design (lo-fi to hi-fi), testing with 3–5 users mid-cycle. Week 4: Final design + documentation + presentation preparation.</p>
+
+          <h4>Scale 4: The 2.5-Month Project</h4>
+          <p>Month 1: Deep research sprint (quantitative analytics + qualitative interviews + session recordings + stakeholder alignment). Month 2: Design sprints — divergent exploration, testing, iteration, cross-functional collaboration. Last 2 weeks: Polish + documentation + handoff + measurement planning.</p>
+
+          <hr>
+
+          <h3>The Asymmetry of Risk</h3>
+          <p>The key difference between scales is not just time. It is also about how much you can afford to be wrong. In a 1-day sprint, being wrong costs you 1 day. In a 2.5-month project, being wrong at Month 1 costs you 10 weeks of work. That asymmetry of risk is why you need more research and validation at larger scales.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="19">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Build your personal Scale-Based Process Card — a document you will actually use. Create 4 cards, one for each scale. For each scale, define:</p>
+          <ul>
+            <li>When to use this scale (what signals tell you this is the right mode?)</li>
+            <li>What you must always do, regardless of constraints</li>
+            <li>What you should do if time allows</li>
+            <li>What you can skip at this scale</li>
+            <li>What to deliver at the end</li>
+            <li>How to present the output</li>
+            <li>What to say to a PM who pushes back on the process</li>
+          </ul>
+          <p>Write this for your own context — B2B SaaS, HR tech. Make it specific enough that you could hand it to a version of yourself starting their first day at a new job.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-duration">4–6 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="19" data-assignment-id="medium-9">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Your new PM at a 200-person Series C startup approaches you on your second week. She says: <em>"We have three things on the roadmap. First, the file upload on the expense claim form is broken on mobile. Second, we're redesigning the time-off request flow (~2 weeks). Third, we're planning a major revamp of the entire manager dashboard — a 3-month project."</em></p>
+          <ol>
+            <li>The file upload fix: what do you do and what do you NOT do?</li>
+            <li>The time-off redesign: what does your 2-week plan look like, day by day?</li>
+            <li>The manager dashboard: what does your 3-month plan look like, month by month?</li>
+            <li>For each, what do you communicate to the PM about what you need from them?</li>
+          </ol>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (4h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="19">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">Where in this exercise did you feel most at ease and where did you feel uncertain? That map tells you where your instincts are strong and where you need more practice.</p>
+        <textarea class="reflection-textarea" data-reflection-day="19" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Treating every new task as a scoping question first. "What scale is this? What process does that scale require?"</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Applying the same process to every task regardless of scale. This is the equivalent of using a sledgehammer to hang a picture frame. It wastes time and signals that you don't understand how product teams actually work.</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-19 -->
+
+  <!-- ══════ DAY 20 ══════ -->
+  <div class="accordion-item" data-day="20" id="day-20">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="20">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 20</span>
+          <span class="accordion-title">Scale Planning Applied — Live Practice</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-short">SHORT</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>Framework without practice is just theory. Today you use the framework on real scenarios, as fast as possible.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">1 hour</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="20">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h4>Today's Study</h4>
+          <p>Re-read your Scale-Based Process Card from Day 19. Add anything you realize is missing. The goal today is rapid application — using the framework on 6 different scenarios in real time, discovering where your instincts are strong and where they need more calibration.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (1h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">4 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="20">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Six rapid-fire scale planning scenarios. For each, spend 30 minutes writing your full plan:</p>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 1</div><p>"Add a CSV export to the ESOP grants table." PM wants it done this week.</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 2</div><p>"Our manager dashboard has very low engagement — barely 20% of managers open it more than once a week." You have 3 weeks.</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 3</div><p>"We want to launch a completely new feature: an AI-assisted benchmarking tool that suggests salary ranges." You have 3 months.</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 4</div><p>"The mobile app has a crash on the login screen. 3 complaints today." PM is panicking. You have the afternoon.</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 5</div><p>"We want to improve the overall employee experience on the platform. Run a discovery sprint." No timeline given.</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 6</div><p>"I saw that Rippling has this cool visualization of org charts. Can we add something like that?" PM is excited. No timeline given.</p></div>
+          <p>For each: identify the scale, write your first 3 steps, identify what you need from the PM before starting, and state what success looks like at the end.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (4h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-short">SHORT</span>
+          <span class="badge badge-duration">1–3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="20" data-assignment-id="short-9">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>For Scenario 5 ("improve the overall employee experience — no timeline given"), write the message you would send to the PM to scope it. Your message should be <strong>under 150 words</strong> and should:</p>
+          <ul>
+            <li>Acknowledge the goal enthusiastically</li>
+            <li>Ask the 3 questions you need answered before starting</li>
+            <li>Propose a 2-day "scoping sprint" with a specific output</li>
+            <li>Set expectations for what happens after the scoping sprint</li>
+          </ul>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (3h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="20">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">The scenario that felt most stressful — note it. Stress in a planning exercise usually points to where your instincts are least developed. Give that scenario extra attention this week.</p>
+        <textarea class="reflection-textarea" data-reflection-day="20" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Responding to ambiguous briefs by scoping them collaboratively, not by either accepting all ambiguity or refusing to start without perfect clarity.</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Saying "yes" to every brief as stated. Every "yes" without scoping is a promise you might not be able to keep. The right answer is always: "Here's what I understood, here's what I need from you, here's what I'll deliver by when."</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-20 -->
+
+  <!-- ══════ DAY 21 — INTEGRATION ══════ -->
+  <div class="accordion-item integration" data-day="21" id="day-21">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="21">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 21</span>
+          <span class="accordion-title">Week 3 Integration — Full Stakeholder Simulation</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-high">HIGH</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>Everything from Week 3 — lean research, business language, design rationale, scale planning — comes together in one thing: your ability to have productive conversations with the people you work with. Design is a team sport. Your skills are only as valuable as your ability to communicate them.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">1 hour</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="21">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h4>Week 3 Integration — Full Stakeholder Communication</h4>
+          <p>Re-read the "Handling Pushback in Real Meetings" concept from Day 17. Pay special attention to the jam experiment reference — the research showing that more options reduce conversion. This is an example of how a UX principle, backed by evidence, can win a stakeholder argument. Build a small personal library of these — 5–7 principles you can cite in meetings.</p>
+          <p>Today is about synthesizing everything from Week 3 into your most polished, high-stakes output yet: a full stakeholder presentation script for your most complex project.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (1h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-high">HIGH</span>
+          <span class="badge badge-duration">Full day</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="21" data-assignment-id="high-3">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Prepare a 10-minute stakeholder presentation for your ESOP project. Write the full script — not bullet points, the actual words.</p>
+          <ol>
+            <li><strong>30 seconds:</strong> The business problem this design solved (in metric language)</li>
+            <li><strong>60 seconds:</strong> The user journey and the 2 key emotional moments you designed for</li>
+            <li><strong>90 seconds:</strong> Your 3 key design decisions with full rationale</li>
+            <li><strong>60 seconds:</strong> How you'd measure success</li>
+            <li><strong>30 seconds:</strong> What you'd improve in the next version and why</li>
+          </ol>
+          <p>Then write 5 hard questions a skeptical senior stakeholder might ask, and write your full answers to each one.</p>
+          <p>Then practice the presentation out loud. Record it. Listen to how you start the first sentence. If the first sentence is about the user problem — great. If the first sentence is about what the screen looks like — rewrite it.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (4h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="21">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">Which was harder — writing the script or speaking it out loud? For most designers, speaking is harder. The written version sounds confident. The spoken version reveals all the places where your conviction wavers. Those wavering places are exactly what Week 4 will help you address.</p>
+        <textarea class="reflection-textarea" data-reflection-day="21" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+    </div>
+  </div><!-- /day-21 -->
+
+</section>
+</main>
+
+<!-- FLOATING TIMER -->
+<div class="timer-widget" id="timer-widget">
+  <div class="timer-widget-header">
+    <span class="timer-block-label" id="timer-block-label">Study Session</span>
+    <button class="timer-minimize-btn" id="timer-minimize" aria-label="Minimize timer">−</button>
+  </div>
+  <div class="timer-ring-wrap">
+    <svg class="timer-ring" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="45" class="timer-ring-bg"/>
+      <circle cx="50" cy="50" r="45" class="timer-ring-progress" id="timer-ring-progress"/>
+    </svg>
+    <div class="timer-display" id="timer-display">2:00:00</div>
+  </div>
+  <div class="timer-blocks">
+    <button class="timer-block-btn active" data-block="study">Study</button>
+    <button class="timer-block-btn" data-block="practice">Practice</button>
+    <button class="timer-block-btn" data-block="assignment">Assignment</button>
+    <button class="timer-block-btn" data-block="reflection">Reflect</button>
+  </div>
+  <div class="timer-controls">
+    <button class="timer-btn" id="timer-play" aria-label="Start timer">
+      <span class="play-icon">▶</span>
+      <span class="pause-icon hidden">⏸</span>
+    </button>
+    <button class="timer-btn" id="timer-reset" aria-label="Reset timer">↺</button>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

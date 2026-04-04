@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"e:/claude testing projects/1 month UX plan/plan/\"*.html)",
+      "Bash(ls \"e:/claude testing projects/1 month UX plan/plan/js/\"*.js)",
+      "Bash(ls \"e:/claude testing projects/1 month UX plan/plan/css/\"*.css)"
+    ]
+  }
+}

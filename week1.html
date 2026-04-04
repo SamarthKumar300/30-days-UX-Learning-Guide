@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 1 — Human-First Foundation | UX Mastery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/week.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">UX<span>Mastery</span></a>
+    <nav class="site-nav">
+      <a href="index.html"       class="nav-link">Dashboard</a>
+      <a href="week1.html"       class="nav-link active">Week 1</a>
+      <a href="week2.html"       class="nav-link">Week 2</a>
+      <a href="week3.html"       class="nav-link">Week 3</a>
+      <a href="week4.html"       class="nav-link">Week 4</a>
+      <a href="assignments.html" class="nav-link">Assignments</a>
+      <a href="references.html"  class="nav-link">Reference</a>
+    </nav>
+    <div class="header-right">
+      <span class="progress-pill" id="progress-pill">Day 1 of 30</span>
+      <div class="week-dots" aria-hidden="true">
+        <span class="week-dot" id="week-dot-1"></span>
+        <span class="week-dot" id="week-dot-2"></span>
+        <span class="week-dot" id="week-dot-3"></span>
+        <span class="week-dot" id="week-dot-4"></span>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<nav class="mobile-drawer" id="mobile-drawer">
+  <a href="index.html" class="nav-link">Dashboard</a>
+  <a href="week1.html" class="nav-link">Week 1: Human-First Foundation</a>
+  <a href="week2.html" class="nav-link">Week 2: Problem Finding &amp; Audit</a>
+  <a href="week3.html" class="nav-link">Week 3: Research, Business &amp; Scale</a>
+  <a href="week4.html" class="nav-link">Week 4: Communication &amp; Portfolio</a>
+  <a href="assignments.html" class="nav-link">Assignment Bank</a>
+  <a href="references.html"  class="nav-link">Quick Reference</a>
+</nav>
+
+<main>
+
+<!-- WEEK HERO -->
+<section class="week-hero" style="--week-accent:var(--week1-color)">
+  <div class="container">
+    <div class="week-hero-eyebrow">Days 1–7</div>
+    <h1 class="week-hero-title">Week 1: <span class="text-gradient-w1">Human-First Foundation</span></h1>
+    <p class="week-hero-goal">Build the mental model of what UX actually is. Not the textbook version. The version that makes a 25 LPA company sit up when you walk into a room. By Day 7, you will look at any product and immediately think in terms of: what is the user trying to accomplish, what emotions are they having right now, and what does the business need from this interaction? Without prompts. Without frameworks. Just as a natural reflex.</p>
+
+    <!-- Week progress dots -->
+    <div class="week-progress-dots">
+      <div class="week-dot-item" data-week-dot="1"><div class="wdot"><span>1</span></div><div class="wdot-label">Day 1</div></div>
+      <div class="week-dot-item" data-week-dot="2"><div class="wdot"><span>2</span></div><div class="wdot-label">Day 2</div></div>
+      <div class="week-dot-item" data-week-dot="3"><div class="wdot"><span>3</span></div><div class="wdot-label">Day 3</div></div>
+      <div class="week-dot-item" data-week-dot="4"><div class="wdot"><span>4</span></div><div class="wdot-label">Day 4</div></div>
+      <div class="week-dot-item" data-week-dot="5"><div class="wdot"><span>5</span></div><div class="wdot-label">Day 5</div></div>
+      <div class="week-dot-item" data-week-dot="6"><div class="wdot"><span>6</span></div><div class="wdot-label">Day 6</div></div>
+      <div class="week-dot-item" data-week-dot="7"><div class="wdot wdot--integration"><span>7</span></div><div class="wdot-label">Day 7</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DAYS ACCORDION -->
+<section class="week-layout container">
+
+  <!-- ══════ DAY 1 ══════ -->
+  <div class="accordion-item" data-day="1" id="day-1">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="1">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 1</span>
+          <span class="accordion-title">What UX Actually Is</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-short">SHORT</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+
+      <!-- Big Idea -->
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>UX is not about screens. It is about the emotions a person has while moving through a journey toward a goal. Your job is to design those emotions — not just the buttons that enable them.</p>
+      </div>
+
+      <!-- Study Session -->
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span>
+          <span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="1">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+
+        <div class="study-content-wrapper">
+          <h3>What Experience Actually Is — The Manu Framework</h3>
+
+          <h4>The Big Shift First</h4>
+          <p>Most designers think their job is to design screens. It is not. Your job is to design the emotions a person has while moving through a journey toward a goal. Screens are just the medium. Experience is the product.</p>
+          <p>Here is the distinction that separates amateur UX thinking from professional UX thinking: utilitarian design gives people what they need to complete a task. Experience design gives people an emotional journey while completing that task. A product can be functionally correct and still feel awful to use. Your job is the "feeling awful" part — specifically, making it not feel that way.</p>
+
+          <hr>
+
+          <h3>The Story Framework — How to See Any Product as an Experience</h3>
+          <p>There is a powerful way to analyze any product experience. It comes from a simple storytelling exercise. Take a user, give them a goal, and trace their entire journey. But here is the critical part most designers miss: you have to include the emotions, not just the actions.</p>
+
+          <h4>1. The Goal</h4>
+          <p>What does the user actually want to achieve? Not what the product offers, but what the human wants. A user opening Swiggy does not want "to place a food order." They want "to solve the problem of being hungry without leaving their house." The goal is human. The product is a means.</p>
+
+          <h4>2. The Starting Point</h4>
+          <p>Where does the journey actually begin? This is almost never where you think it is. The journey does not begin when the app opens. It begins when the user decides they need the product. The moment of intent is the real starting point.</p>
+
+          <h4>3. The Ending Point</h4>
+          <p>Where does the journey end? When the task is complete. Not when the user leaves the app, but when the user's original goal is met.</p>
+
+          <h4>4. The Flow</h4>
+          <p>All the connected steps between start and end. Every action the user takes. Every screen they see. Every decision point.</p>
+
+          <h4>5. The Interactions</h4>
+          <p>Every product element the user touches, reads, or responds to. Search bars, buttons, confirmation messages, loading states. Each one is a moment of communication between the product and the human.</p>
+
+          <h4>6. The Decisions</h4>
+          <p>At each step of the flow, the user is making micro-decisions. Which restaurant? Which payment method? Should I proceed or go back? Each decision is a cognitive load the product is placing on the user. Good design reduces that load. Bad design multiplies it.</p>
+
+          <h4>7. The Emotions</h4>
+          <p>This is the part nobody else is tracking. At each decision point, at each interaction, the user is feeling something. They might feel excited when they open the app, frustrated when they can't find the right filter, relieved when the payment goes through, and satisfied when the delivery notification appears. These emotions are not decorations to the experience. <strong>They ARE the experience.</strong></p>
+
+          <hr>
+
+          <h3>The Three Building Blocks of Every Interaction</h3>
+          <p>Every single element on every single screen operates through three mechanisms. These three words are not jargon. They are a diagnostic tool you will use for the rest of your career.</p>
+
+          <h4>Affordance</h4>
+          <p>The ability of an element to be interacted with. A button has affordance because it can be clicked. A search bar has affordance because it can receive text input. Affordance is about capability.</p>
+
+          <h4>Signifier</h4>
+          <p>The visual cues that communicate the affordance to the user. A button looks elevated or colored differently so the user understands it can be clicked. Signifiers are about communication.</p>
+
+          <h4>Feedback</h4>
+          <p>The product's response to the user's action that confirms it worked. When you tap a button, the screen changes. When you type in a search bar, results appear. Feedback closes the loop of communication.</p>
+
+          <blockquote>When any of these three breaks down, the experience breaks down. Every screen element you place in Figma needs to be evaluated on all three: Can the user interact with it? Do they know they can interact with it? Will they know when their interaction worked?</blockquote>
+
+          <hr>
+
+          <h3>The Utilitarian Trap</h3>
+          <p>Most junior designers fall into what can be called the utilitarian trap. They design for task completion without designing for the emotional journey. They think: "The user can complete this flow, therefore my design works."</p>
+          <p>But here is the truth: a product that lets people complete tasks but makes them feel nothing — or worse, makes them feel anxious, confused, or frustrated along the way — is not good product design. It is plumbing.</p>
+          <p>Think about Figma. Why do you like using it? It is not just because it lets you create designs. It is because the process of creating in Figma <em>feels</em> smooth, responsive, and satisfying. Your job is to design the second thing, not just the first.</p>
+
+          <hr>
+
+          <h3>The Two Types of Product Improvement</h3>
+          <p>When you look at any product experience, you are looking for two types of improvement opportunities — not one.</p>
+          <p><strong>Gaps</strong> — Places where a negative emotion is happening that should not be. These are the friction points, the confusing moments, the places where users feel lost, anxious, or frustrated. Gaps demand to be closed.</p>
+          <p><strong>Opportunities</strong> — Places where a positive emotion is already happening that you can amplify. These are the moments of delight, the satisfying confirmations, the places where users feel clever, accomplished, or excited. Opportunities invite to be expanded.</p>
+          <p>Most junior designers only look for gaps. The best product experiences do not just remove negative emotions — they actively create positive ones. <strong>Every negative emotion is a gap. Every positive is an opportunity.</strong></p>
+        </div>
+
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <!-- Practice -->
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span>
+          <span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="1">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Open Swiggy on your phone. Order something (or simulate). Write the full journey as a story — exactly like the Manu concert story. Include:</p>
+          <ul>
+            <li>The user's goal (what they want to achieve)</li>
+            <li>The starting point (where does the journey begin)</li>
+            <li>The ending point (where does it end)</li>
+            <li>Every decision the user makes along the way</li>
+            <li>Every emotion at each stage — both positive and negative</li>
+            <li>Every product element they interact with (search bar, restaurant card, checkout button, delivery tracking)</li>
+          </ul>
+          <p><strong>Do NOT write this as a list of screens.</strong> Write it as a story. First person if it helps. "I open Swiggy and immediately see the search bar at the top. I feel slightly overwhelmed by the restaurant cards below it — there are 40 options and I don't know where to look first..." That kind of writing.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <!-- Assignment -->
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span>
+          <span class="block-label">Daily Assignment</span>
+          <span class="badge badge-short">SHORT</span>
+          <span class="badge badge-duration">1–3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="1" data-assignment-id="short-1">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Take the Razorpay payment checkout flow (or any payment flow you've used). Write a <strong>400-word story</strong> of the user's journey through it.</p>
+          <ol>
+            <li>Include at minimum <strong>6 distinct emotions</strong> across the flow</li>
+            <li>Label each emotion as a Gap (negative) or Opportunity (positive)</li>
+            <li>At the end, write one sentence: <em>"The moment where this experience most needs improvement is ___ because the user feels ___."</em></li>
+          </ol>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (3h)</button>
+      </div>
+
+      <!-- Reflection -->
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span>
+          <span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="1">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">What surprised you about thinking in emotions instead of screens? Where did you struggle to identify emotions? That struggle is data about where your empathy muscle is weak.</p>
+        <textarea class="reflection-textarea" data-reflection-day="1" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <!-- Direction panels -->
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button">
+            <span>✅ Right Direction</span><span class="direction-arrow">▾</span>
+          </div>
+          <div class="direction-panel-body">
+            <p>You are building a reflex to always start with the human before the screen.</p>
+          </div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button">
+            <span>❌ Wrong Direction</span><span class="direction-arrow">▾</span>
+          </div>
+          <div class="direction-panel-body">
+            <p>Writing the journey as a numbered list of actions with no emotional layer. That is utilitarian documentation, not UX thinking. A UX designer who cannot name emotions is a glorified screen-layout person.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /accordion-body -->
+  </div><!-- /day-1 -->
+
+
+  <!-- ══════ DAY 2 ══════ -->
+  <div class="accordion-item" data-day="2" id="day-2">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="2">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 2</span>
+          <span class="accordion-title">The UX Designer's Mental Model — Ambiguity to Clarity</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-short">SHORT</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>Your job is not to execute briefs. Your job is to turn ambiguity into clarity. Every input you receive — a PM's vague request, a screenshot, a PRD, a verbal complaint — is just ambiguity at different stages. Your value is in bringing clarity to it.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span>
+          <span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="2">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Your Real Job — Turning Ambiguity Into Clarity</h3>
+
+          <h4>The Model That Changes Everything</h4>
+          <p>Here is the most honest description of what a UX designer actually does, stripped of all the process language: you receive ambiguous input and you produce clarity.</p>
+          <p>That input can be almost anything. A PM might send you a competitor's screenshot with "make something like this." An engineer might paste a technical requirement document and ask you to figure out the UI. Your CEO might show you a whiteboard sketch from yesterday's brainstorm. A customer support lead might paste 10 user complaints into Slack.</p>
+          <p>All of these are ambiguity in different forms. Your job — every single time — is to take that ambiguity and produce something clearer. Note: this means you are never waiting for a "perfect brief" to start. The brief IS the ambiguity. That is your starting point.</p>
+
+          <hr>
+
+          <h3>The Value Creation Triangle</h3>
+          <p>Every product company operates inside a triangle with three points: the User, the Business, and the Designer (you).</p>
+          <p>The Business makes money by solving problems for Users. The Designer's job is to ensure that the solutions the Business creates actually work for Users — and to communicate clearly between both.</p>
+          <p>Here is what most designers misunderstand: they think their job is to advocate for the User <em>against</em> the Business. This is wrong. Your job is to make the User-Business connection work through good experience design. When users have a better experience, they trust the product more, use it more, recommend it more, and return more. All of these behaviors are good for the Business.</p>
+          <p><strong>This means: every design decision you make should be explainable in terms of how it helps users AND how that user benefit translates into business value. Not one or the other — both.</strong></p>
+
+          <hr>
+
+          <h3>The Question That Changes Meetings</h3>
+          <blockquote>"What business metric is this trying to move?"</blockquote>
+          <p>When you ask this question, several things happen simultaneously. The PM realizes you understand that design work has commercial purpose. They begin to respect your input at a strategic level, not just an execution level. The conversation shifts from "what it should look like" to "what it should achieve."</p>
+          <p>There is not a single PM in any product company who does not have business metrics attached to their work. Metrics are how their performance is evaluated. When you ask about metrics, you are speaking their language. <strong>Do not skip this question. Ask it at the start of every new project, every new feature, every brief that comes your way.</strong></p>
+
+          <hr>
+
+          <h3>The Fidelity Model — How Clarity Scales</h3>
+          <p>Fidelity is about clarity — not visual quality. At the beginning of any project, your clarity is low. At this stage, your design output should match your clarity level — rough, quick, easy to change. Sketches. Boxes with labels.</p>
+          <p>The mistake most juniors make: they open Figma immediately (high-fidelity tool), start designing fully detailed screens (high-fidelity output), and become emotionally attached to those screens (high-fidelity investment). Now when a PM challenges the direction, changing it feels like a loss. If you had started with low-fidelity output, changing direction would feel natural.</p>
+
+          <hr>
+
+          <h3>The Real Difference Between Junior and Senior Designers</h3>
+          <p><strong>Junior designers</strong> think about deliverables. "I need to produce wireframes, then high-fidelity designs, then a prototype." The deliverable is the goal.</p>
+          <p><strong>Senior designers</strong> think about decisions. "I need to understand the problem well enough to make good design decisions and explain them clearly." The decision is the goal. The deliverable is just the format in which the decision is communicated.</p>
+          <p>The portfolios that impress senior interviewers are not full of more screens or more polished visuals. They are full of more decisions — clearly articulated, well-reasoned, and honest about trade-offs.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="2">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Take 5 different types of "ambiguous input" you might receive in your next job. Write what each one looks like and what your first step would be:</p>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 1</div><p>PM shows you a competitor's feature on their phone and says "can we make something like this?"</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 2</div><p>PM sends you a 12-page PRD document over Slack</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 3</div><p>PM verbally says in a standup "users are complaining about the onboarding"</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 4</div><p>PM says "we have a board meeting in 3 days and need to show something for the new dashboard"</p></div>
+          <div class="practice-phase"><div class="practice-phase-num">Scenario 5</div><p>PM places a hand-drawn sketch on your desk and says "I was thinking something like this"</p></div>
+          <p>For each: What is the ambiguity? What is the first question you ask? What is the first thing you do?</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-short">SHORT</span>
+          <span class="badge badge-duration">1–3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="2" data-assignment-id="short-2">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Your PM sends you this message over Slack: <em>"Hey, we need to add a notification bell to the dashboard. Can you start on designs?"</em></p>
+          <ol>
+            <li>Write your full response — not the designs, but what you say back</li>
+            <li>Use business metric language in your response</li>
+            <li>Write the 3–4 clarifying questions you would ask before touching Figma</li>
+            <li>Write what the <strong>wrong</strong> response looks like (a junior designer who just opens Figma immediately)</li>
+          </ol>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (3h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="2">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">The gap between a 10 LPA and a 25 LPA designer is often just this: the 25 LPA designer asks one more question before starting. They ask "what are we trying to achieve?" not "what should it look like?" Write about where you personally tend to skip this step.</p>
+        <textarea class="reflection-textarea" data-reflection-day="2" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Treating every brief as a starting point for a conversation, not a starting point for Figma.</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Opening Figma immediately when you get a brief. This is called "solutionizing" — jumping to solution before understanding the problem. It is the most common junior mistake and it produces work that gets rejected in review.</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-2 -->
+
+
+  <!-- ══════ DAY 3 ══════ -->
+  <div class="accordion-item" data-day="3" id="day-3">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="3">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 3</span>
+          <span class="accordion-title">Business Metrics — The Language That Gets You Paid</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-short">SHORT</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>A designer who can speak in metrics is worth double. Not because metrics are everything — but because business people think in metrics, and if you speak their language, they trust you more, give you more autonomy, and eventually pay you more.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="3">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Business Metrics — The Language of Product Companies</h3>
+
+          <h4>Why Metrics Are Your Responsibility</h4>
+          <p>Here is the uncomfortable truth about UX design and business metrics: you do not control these numbers, but you directly influence them. Every design decision you make — the position of a button, the length of a form, the structure of a confirmation message — affects whether users complete actions, return to the product, and spend more over time.</p>
+          <p>If you cannot connect your design decisions to these numbers, you will always be treated as a "soft skills" person at your company. The moment you can say "this change should improve our checkout completion rate because it removes the uncertainty users feel at Step 3 of the payment flow" — you are at the table.</p>
+
+          <hr>
+
+          <h3>The Four Core Metrics</h3>
+
+          <h4>Conversion Rate (CR)</h4>
+          <p><strong>What it measures:</strong> out of all the people who reach a specific point in the product, what percentage do the thing you want them to do?</p>
+          <p><strong>Why it matters for design:</strong> Conversion Rate is almost always a UX problem before it is a marketing problem. If people arrive at your product page but don't buy, something in the experience is creating doubt, confusion, or friction. Your design is the last line of defense between "almost a customer" and "actual customer."</p>
+          <p><strong>Common conversion killers in design:</strong> unclear value proposition above the fold, too many choices creating decision paralysis, trust signals missing or buried, form fields that ask for too much, CTA buttons with generic or confusing labels.</p>
+
+          <h4>Average Order Value (AOV)</h4>
+          <p><strong>What it measures:</strong> when someone does purchase or complete a transaction, how much money do they spend on average?</p>
+          <p><strong>Why it matters for design:</strong> you can influence AOV directly through how you design related product suggestions, bundles, upgrades, and add-on moments. AOV opportunities only work when they feel natural and helpful. An add-on that appears at the right moment in the right context has a dramatically higher conversion than an add-on that appears aggressively at every page.</p>
+
+          <h4>Retention Rate</h4>
+          <p><strong>What it measures:</strong> of the users who used the product in one period, what percentage come back in the next period?</p>
+          <p><strong>Why it matters for design:</strong> acquiring a new user costs 5 to 7 times more than retaining an existing one. Retention is almost entirely a UX problem. Users leave when the product fails to deliver value consistently. Day 1 retention is about onboarding. Day 7 retention is about the core experience. Day 30 retention is about habit formation.</p>
+
+          <h4>Daily Active Users (DAU) / Monthly Active Users (MAU)</h4>
+          <p><strong>What it measures:</strong> how many unique users engage with the product within a given day or month?</p>
+          <p><strong>Why it matters for design:</strong> the most important design lever for DAU is onboarding — specifically, "time to first value." How quickly does a new user experience the core value of your product? Every minute of onboarding that delays the core value moment is a retention risk.</p>
+
+          <hr>
+
+          <h3>The Mindset Shift</h3>
+          <blockquote>A common junior misconception: "Business metrics are the PM's job. My job is to design good experiences." This is a false separation. The PM sets the metric goals. You design the experiences that move them. You do not own the number. But your work directly influences it.</blockquote>
+
+          <h3>When You Don't Have Real Data</h3>
+          <p>Most designers do not have access to real analytics dashboards in their day-to-day work. This does not mean you cannot think in metrics.</p>
+          <p>When you don't have data, do three things: First, state what you would want to measure. Second, use industry benchmarks (the average checkout abandonment rate for e-commerce is around 70%). Third, run lightweight qualitative research — 5 users navigating a prototype out loud gives you proxy data for where the friction points are.</p>
+          <p><strong>The habit to build:</strong> at the end of every design decision, ask yourself "what metric does this decision affect, and how?" If you cannot answer, that is a signal the decision might not be grounded in business reality.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="3">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Go through your three most significant past projects. For each one, answer these questions in writing:</p>
+          <ul>
+            <li>What was the product's primary business model? How did it make money or save money?</li>
+            <li>Which business metric was your project most directly trying to move?</li>
+            <li>Did the experience you designed actually help move that metric? How?</li>
+            <li>If you had to add one metric you would track to evaluate the success of your design, what would it be?</li>
+          </ul>
+          <p>This is not a hypothetical exercise. This is the actual question senior interviewers will ask you. Practice answering it about your real work.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-short">SHORT</span>
+          <span class="badge badge-duration">1–3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="3" data-assignment-id="short-3">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Take the Swiggy or Zomato food ordering flow. Write three short paragraphs (one per metric):</p>
+          <ol>
+            <li>How does the current design of the restaurant listing page impact <strong>conversion rate</strong>? What is one specific change you would make and why would it move the metric?</li>
+            <li>How does the "frequently ordered together" or "add-on" section impact <strong>average order value</strong>? Is it working? What would make it work better?</li>
+            <li>How does the post-order experience (tracking, rating, re-order) impact <strong>retention</strong>? What one addition would most improve repeat ordering?</li>
+          </ol>
+          <p>Each paragraph should end with: <em>"The expected metric impact is ___ because ___."</em></p>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (3h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="3">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">Which metric do you feel most comfortable explaining? Which one still feels fuzzy? The fuzzy ones are the ones you need to practice speaking out loud — not just writing.</p>
+        <textarea class="reflection-textarea" data-reflection-day="3" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Framing design decisions in terms of "this will improve [metric] by doing [specific thing] because [reason]."</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Saying "this will improve the user experience." That sentence means nothing in a business meeting. It is a filler phrase. The moment you say it, a PM or senior stakeholder internally discounts your point. Replace it with the specific metric and the specific mechanism.</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-3 -->
+
+
+  <!-- ══════ DAY 4 ══════ -->
+  <div class="accordion-item" data-day="4" id="day-4">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="4">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 4</span>
+          <span class="accordion-title">Emotion Mapping — The Skill AI Will Never Have</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-medium">MEDIUM</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>Every screen has two types of opportunities — gaps (places where negative emotions are happening that you can fix) and opportunities (places where positive emotions are happening that you can amplify). Most junior designers only look for gaps. Senior designers hunt both. This is also the skill most directly dependent on you being human.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="4">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Emotion Mapping — The One Skill AI Cannot Copy</h3>
+
+          <h4>Why Emotions Are the Actual Design Material</h4>
+          <p>When a business measures conversion rates, it is measuring the downstream effect of emotions. Users who feel confident and trust the product convert. Users who feel uncertain, confused, or overwhelmed do not. You cannot design emotions directly — you cannot put a button that says "feel confident here." But you can design the conditions that produce specific emotions.</p>
+
+          <hr>
+
+          <h3>The Two Types of Emotional Moments</h3>
+          <p><strong>Gaps</strong> are where negative emotions are happening that should not be. A gap is when a user feels lost navigating your product's menu. A gap is when a user feels anxious about whether their payment went through. A gap is when a user feels stupid because the error message made no sense. Gaps damage trust, increase support costs, and reduce conversion.</p>
+          <p><strong>Opportunities</strong> are where positive emotions are already happening that can be amplified. An opportunity is where a user already feels relieved when they find the right product — you could make that relief even stronger. An opportunity is where a user feels accomplished after completing a complex task — you could celebrate that accomplishment explicitly.</p>
+          <blockquote>Most junior designers audit products ONLY for gaps. They produce a list of problems to fix. But the best product experiences do not just remove pain — they create joy. If you only fix gaps, you will produce a product that is less bad. If you also amplify opportunities, you will produce a product that is genuinely good.</blockquote>
+
+          <hr>
+
+          <h3>The Emotion Mapping Method — Step By Step</h3>
+          <ol>
+            <li>Write the user journey as a story, not a list. First person. Include what the user is thinking, not just what they are doing.</li>
+            <li>At each decision point or interaction point, pause and ask: what is this user feeling right now? Be specific. Not "frustrated" — "frustrated because they cannot find the filter they need and they are running out of patience."</li>
+            <li>For each emotion, label it as a Gap (negative, needs addressing) or an Opportunity (positive, can be amplified).</li>
+            <li>For each Gap, ask: what specific design change would remove or reduce this negative emotion?</li>
+            <li>For each Opportunity, ask: what specific design addition would amplify this positive emotion further?</li>
+          </ol>
+
+          <hr>
+
+          <h3>The Power of Contextual Emotion — The Myntra Example</h3>
+          <p>Take a product listing page on Myntra. Most designers look at this page and see: image, title, price, rating, add to cart. They ask "what is broken?" and look for layout problems.</p>
+          <p>But here is what you see when you map emotions. A user on a product listing page is not in a neutral state. They are in a browsing-and-deciding state. What emotions are active?</p>
+          <div class="emotion-grid">
+            <div class="emotion-card gap">
+              <div class="emotion-type">Gap</div>
+              <p><strong>Overwhelm</strong> — "There are 300 results. How am I supposed to choose?"</p>
+            </div>
+            <div class="emotion-card gap">
+              <div class="emotion-type">Gap</div>
+              <p><strong>Indecision</strong> — "This one is cheaper but that one looks better quality. I can't tell from the photo."</p>
+            </div>
+            <div class="emotion-card gap">
+              <div class="emotion-type">Gap</div>
+              <p><strong>"Will this fit?" anxiety</strong> — specific to clothing, profound uncertainty before any size selection.</p>
+            </div>
+            <div class="emotion-card opportunity">
+              <div class="emotion-type">Opportunity</div>
+              <p><strong>Excitement</strong> — "Oh, look at this. This is really nice. I didn't even know this existed."</p>
+            </div>
+          </div>
+          <p>The "will this fit?" anxiety — if you can design an element that directly speaks to that anxiety — a size guide that is easy to use, customer photos of people with stated body dimensions, a "fits true to size" tag from verified buyers — you are designing directly to the emotional state of the user at the exact moment they feel it. That is emotion-first design.</p>
+
+          <hr>
+
+          <h3>Why AI Cannot Do Emotion Mapping</h3>
+          <p>AI can analyze click data, identify drop-off points, and even generate suggested improvements based on patterns. But it cannot do emotion mapping in the way that matters.</p>
+          <p>When you are mapping the anxiety of a first-time job applicant filling out a LinkedIn application, you are drawing on your own experience of vulnerability, hope, and fear of rejection. AI processes patterns. <strong>You process meaning.</strong> The meaning layer — why this emotion exists in this context for this type of human — is irreducibly human. This is where your value as a designer lives.</p>
+
+          <hr>
+
+          <h3>Real vs. Stated User Needs</h3>
+          <p>Users say one thing and mean another. Always. This is not deception — it is just the nature of human communication.</p>
+          <p>A user says: "I want more features in this app." What they actually mean: "I feel limited when I try to do [specific thing] and I cannot figure out how."</p>
+          <p>A user says: "The design looks outdated." What they actually mean: "I don't trust this product. Something makes me feel it might not be reliable."</p>
+          <p>A user says: "I want a search bar." What they actually mean: "I cannot find what I need in your current navigation and it is frustrating."</p>
+          <blockquote>The stated need points to a surface solution. The real need points to the emotional problem underneath. Your job is to hear the stated need and then ask: "what emotion is this person experiencing that is making them say this?" That emotion is the real design brief.</blockquote>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="4">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Take the LinkedIn job search flow. Map the full emotion journey across these stages:</p>
+          <ul>
+            <li>Opening the app with intent to job hunt</li>
+            <li>Browsing job listings</li>
+            <li>Reading one specific job description</li>
+            <li>Clicking "Easy Apply"</li>
+            <li>Filling the application form</li>
+            <li>Submitting and waiting for confirmation</li>
+          </ul>
+          <p>For each stage, write: What is the user thinking? What emotion are they feeling (name it precisely)? Is this a gap or an opportunity? What design change would address this?</p>
+          <p>You should generate at least <strong>10 mapped moments</strong> across the full flow.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-duration">4–6 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="4" data-assignment-id="medium-1">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Take two different users with two different contexts using the same flow:</p>
+          <p><strong>User A:</strong> A fresh graduate using LinkedIn to apply for their first job, feeling nervous and unsure.</p>
+          <p><strong>User B:</strong> An experienced designer with 4 years of experience, applying casually while employed, feeling confident but impatient.</p>
+          <ol>
+            <li>Map the emotion journey for BOTH users across the LinkedIn job application flow</li>
+            <li>Write where their emotions are the same, and where they diverge</li>
+            <li>Write one design decision that helps both users</li>
+            <li>Write one design decision that primarily helps User A but might not matter to User B</li>
+          </ol>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (4h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="4">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">Where did you make assumptions about user emotions instead of actually reasoning about them? Write 3 emotions you initially wrote and then changed when you thought harder. This shows you where your default assumptions live.</p>
+        <textarea class="reflection-textarea" data-reflection-day="4" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Asking "what is the user FEELING at this moment?" as a design question, not as a soft add-on.</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Only mapping pain points and calling them "friction." This produces designs that fix problems but do not create joy. A great product does both. Think about why you love using Figma even on a hard day — it is not because it has no friction. It is because it creates moments of genuine delight.</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-4 -->
+
+
+  <!-- ══════ DAY 5 ══════ -->
+  <div class="accordion-item" data-day="5" id="day-5">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="5">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 5</span>
+          <span class="accordion-title">Business Metrics in Practice — Presenting Decisions Like a Senior</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-short">SHORT</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>Knowing what a metric is and being able to talk about it confidently in a room are two completely different things. Today you build the bridge between theoretical knowledge and practical fluency.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="5">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Presenting Decisions Like a Senior Designer</h3>
+
+          <h4>The Core Principle — You Are Not a Tour Guide</h4>
+          <p>The most common mistake junior designers make when presenting their work is narrating it. They open the screen and say: "So here's the dashboard. The navigation is on the left side. Below that is the activity feed..."</p>
+          <p>This describes what is already visible. It contributes nothing to the stakeholder's understanding of whether this is a good design decision. A senior designer does not describe what is on the screen. <strong>They explain why it is on the screen.</strong></p>
+
+          <hr>
+
+          <h3>The Design Rationale Formula — Your Primary Communication Tool</h3>
+          <blockquote><strong>"I chose [X] because [user need or pain point], which is supported by [evidence or principle]. The alternative I considered was [Y], but it carries the trade-off of [specific downside]. The expected outcome is [metric or behavioral impact]."</strong></blockquote>
+          <p>Every element of this formula serves a purpose. "I chose X" signals ownership. "Because [user need]" anchors the decision in the user. "Supported by [evidence]" transforms your opinion into a defensible position. "The alternative was Y" shows you considered options. "Expected outcome" connects your design to what the business cares about.</p>
+          <p><strong>Bad version:</strong> "I chose a modal for the confirmation screen because it looks cleaner."</p>
+          <p><strong>Good version:</strong> "I chose a modal for the confirmation screen because our user research showed that users were frequently navigating away mid-task when confirmation appeared as a separate page. A modal keeps the user in context. The trade-off is that modals can feel intrusive on mobile, so we added a clear dismiss action. The expected outcome is a reduction in task abandonment at the confirmation step."</p>
+
+          <hr>
+
+          <h3>The Presentation Structure That Works</h3>
+          <div class="scale-cards">
+            <div class="scale-card">
+              <div class="scale-card-title">Step 1 — 30 seconds</div>
+              <div class="scale-card-content">The user problem. Not what the product does. Not what the design looks like. The specific problem a real user was experiencing.</div>
+            </div>
+            <div class="scale-card">
+              <div class="scale-card-title">Step 2 — 15 seconds</div>
+              <div class="scale-card-content">The business goal. What metric or behavior is this design trying to move? Be specific.</div>
+            </div>
+            <div class="scale-card">
+              <div class="scale-card-title">Step 3 — 2–3 minutes</div>
+              <div class="scale-card-content">Your key design decisions. Not a tour of every element. The 2–3 decisions that were deliberate, non-obvious, and informed by evidence. Each one uses the rationale formula.</div>
+            </div>
+            <div class="scale-card">
+              <div class="scale-card-title">Step 4 — 30 seconds</div>
+              <div class="scale-card-content">Pre-empt the obvious pushback. If there is a competing approach stakeholders might ask about, address it before they ask.</div>
+            </div>
+          </div>
+          <p>This entire structure takes 5 minutes. In 5 minutes, a senior stakeholder can understand exactly what problem you solved, why you solved it this way, and how you will know if it worked.</p>
+
+          <hr>
+
+          <h3>Handling Vague Feedback — "Just Make It Pop"</h3>
+          <p>Every designer eventually hears "can you make it pop more?" or "it feels a bit flat." These are not feedback statements. They are clues to a real concern the stakeholder cannot yet articulate.</p>
+          <p><strong>Step 1:</strong> Do not react emotionally. Stay curious, not defensive.</p>
+          <p><strong>Step 2:</strong> Ask a clarifying question that redirects toward a specific design problem: "When you say 'pop' — is there something specific that feels flat? Is it the hierarchy? The visual weight of the primary action?"</p>
+          <p><strong>Step 3:</strong> Reframe their feedback into a design hypothesis you can test: "It sounds like the hierarchy might not be directing attention to the value proposition clearly enough. Let me try amplifying the contrast between the primary action and the secondary content."</p>
+
+          <hr>
+
+          <h3>The Jam Experiment — Why "More Options" Kills Conversion</h3>
+          <p>When shoppers were presented with 24 varieties of jam to sample, far fewer purchased compared to a display with only 6 varieties. The principle: too many choices leads to decision paralysis. Users presented with 24 options experience cognitive overload and often choose nothing at all. This is the paradox of choice.</p>
+          <p>Why this matters in meetings: whenever a PM says "let's add more options," you now have a research-backed argument for why this might hurt the metric they care about. Citing research depersonalizes the disagreement — you are not saying the PM is wrong. You are saying "here is what behavior science has observed."</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="5">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Go through your most complex past project. Pick 5 specific design decisions you made. For each one, write the full design rationale formula.</p>
+          <p>If any of the 5 rationales comes out as "because it looked better" or "because that's what the PM wanted" — that is a gap. Rewrite it using evidence (even if you have to look up a UX principle to support it retroactively).</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-short">SHORT</span>
+          <span class="badge badge-duration">1–3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="5" data-assignment-id="short-4">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Simulate a design review. A senior PM at your new company asks you three questions about one of your past projects:</p>
+          <ol>
+            <li>"Why did you choose [a specific layout or component] for this feature?"</li>
+            <li>"We thought about doing [alternative approach]. Why didn't you go that way?"</li>
+            <li>"How will we know if this design is working? What should we measure?"</li>
+          </ol>
+          <p>Write your answers to all three questions. Each answer should use the design rationale formula. Each answer should include the metric that the decision affects.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (3h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="5">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">Which of the 5 rationales was hardest to write? That decision is the one you made on instinct rather than evidence. Senior designers make instinct-based decisions too — but the skill is being able to reconstruct the reasoning behind instinct and articulate it clearly.</p>
+        <textarea class="reflection-textarea" data-reflection-day="5" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Presenting designs by starting with the user problem and the business goal, then explaining your key decisions, and ending with how you'd measure success.</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>The "tour guide" presentation: "So here's the homepage, and below that I put the features section, and then there's a CTA at the bottom..." This describes what they can already see. It signals that you think your job is to explain screens, not defend decisions.</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-5 -->
+
+
+  <!-- ══════ DAY 6 ══════ -->
+  <div class="accordion-item" data-day="6" id="day-6">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="6">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 6</span>
+          <span class="accordion-title">Project Scale Planning — The Framework You've Been Missing</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-medium">MEDIUM</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>There is no one "correct" UX process. The right process depends entirely on the scale of the work, the constraints of the business, and the amount of time you have. A senior designer can deliver great work in 1 day. The same designer can also plan a 2.5-month project roadmap. The difference is knowing how to apply divergent and convergent thinking at the right moments.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="6">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Project Scale Planning — From 1-Day Sprints to 3-Month Projects</h3>
+
+          <h4>The Most Important Reframe</h4>
+          <p>UX process is not a procedure. It is not a checklist you follow in a specific order. It is a practice you develop — a way of thinking that you can apply flexibly, at different scales, under different constraints.</p>
+          <p>The designers who struggle with real-world product work are the ones who try to apply the full double diamond to every task, regardless of whether there are 2 days or 2 months available. This is not thoroughness. It is inflexibility.</p>
+
+          <hr>
+
+          <h3>Divergent and Convergent Thinking — The Two Modes</h3>
+          <p><strong>Divergent thinking</strong> is about generating possibilities. You remove constraints temporarily. You ask: "If time, budget, and engineering complexity were not factors, what would the ideal experience look like?" Divergent thinking produces a wide space of options. It is messy, generative, and deliberately uncritical. Judging ideas while in divergent mode kills it.</p>
+          <p><strong>Convergent thinking</strong> is about making decisions. You add constraints back in. You ask: "Given our real constraints — 2 weeks, one developer, existing design system — which option produces the best outcome?"</p>
+
+          <hr>
+
+          <h3>The Project Scale Framework</h3>
+
+          <div class="scale-cards">
+            <div class="scale-card">
+              <div class="scale-card-title">Scale 1 — 1-Day Sprint</div>
+              <div class="scale-card-content">1h understand goal · 1h Layer 1 audit · 1.5h divergent sketching · 30m convergent selection · 4h execution · 1h decision story · 1h buffer</div>
+            </div>
+            <div class="scale-card">
+              <div class="scale-card-title">Scale 2 — 1-Week Sprint</div>
+              <div class="scale-card-content">Day 1: Scope + guerrilla test · Day 2: Root cause + ideation · Day 3: Convergent + wireframes · Day 4: Hi-fi + edge cases · Day 5: Documentation + presentation</div>
+            </div>
+            <div class="scale-card">
+              <div class="scale-card-title">Scale 3 — 1-Month Project</div>
+              <div class="scale-card-content">Week 1: Discovery (5 interviews, analytics, competitive) · Week 2: Problem definition + ideation · Week 3: Iterative design + testing · Week 4: Final + documentation</div>
+            </div>
+            <div class="scale-card">
+              <div class="scale-card-title">Scale 4 — 2.5-Month Project</div>
+              <div class="scale-card-content">Month 1: Deep research (quant + qual + stakeholder alignment) · Month 2: Design sprints, testing, iteration · Last 2 weeks: Polish + handoff + measurement</div>
+            </div>
+          </div>
+
+          <hr>
+
+          <h3>Designing Under Real Business Constraints</h3>
+          <p>You can design something brilliant in one day. The quality of a design decision is not determined by the amount of time spent on it. It is determined by the clarity of the thinking behind it.</p>
+          <p>The constraint changes what you <em>skip</em>, not what you think about. In a 1-day sprint, you skip formal user interviews. You do not skip asking what metric you are trying to move. You do not skip writing a brief rationale for what you chose and why.</p>
+
+          <hr>
+
+          <h3>The Northstar vs. The Constraint-Bound Design</h3>
+          <p>Senior designers can hold two mental models simultaneously:</p>
+          <p><strong>The Northstar design:</strong> "What would the ideal experience look like if we had unlimited time and resources?" This gives you a direction — a true north that all constrained decisions can reference.</p>
+          <p><strong>The constraint-bound design:</strong> "Given our real-world limitations, what is the best version of the Northstar we can build right now?" This is what you actually ship.</p>
+          <p>Start every project with a Northstar exploration, even brief. Then converge hard on what is achievable. The Northstar becomes the argument for why current constraints are limiting the user experience.</p>
+
+          <hr>
+
+          <h3>The Non-Linear Reality</h3>
+          <p>The real design process is not linear. You will start designing, discover you do not understand the problem well enough, go back and do research you should have done earlier. You will test a prototype, get unexpected feedback, and redesign something you thought was finished.</p>
+          <p>This is not failure. This is design. The loop of ambiguity to clarity does not move in one direction — it spirals. <strong>Treat every design as a hypothesis. The more you think in hypotheses rather than answers, the less attached you become to your own work, and the more effectively you iterate.</strong></p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="6">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Brief: "Add bulk email notifications to the ESOP grant management platform." Map out your plan for each of the 4 scales:</p>
+          <ul>
+            <li><strong>1 day:</strong> What do you prioritize? What do you skip?</li>
+            <li><strong>1 week:</strong> What does each day look like?</li>
+            <li><strong>1 month:</strong> What does each week look like?</li>
+            <li><strong>2.5 months:</strong> What does each month look like?</li>
+          </ul>
+          <p>Notice where your process changes and more importantly WHY it changes.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-medium">MEDIUM</span>
+          <span class="badge badge-duration">4–6 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="6" data-assignment-id="medium-2">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Monday morning. Your PM says: <em>"Hey, our users are complaining that it takes too long to find a specific grant in the management table. Can you fix this by Wednesday?"</em> Today is Monday. You have until Wednesday end of day.</p>
+          <ol>
+            <li>What is the first question you ask the PM?</li>
+            <li>What do you do in the first 2 hours of Monday?</li>
+            <li>What do you build on Monday?</li>
+            <li>What do you validate or test on Tuesday?</li>
+            <li>What do you deliver by Wednesday EOD?</li>
+            <li>What rationale do you write for your design decision?</li>
+            <li>How do you present this in a 5-minute Wednesday review?</li>
+          </ol>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (4h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="6">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">Where do you default to spending too much time? Most junior designers either over-research (delaying decisions) or under-research (making assumptions). Which pattern is yours? Write it down honestly — knowing your own bias is the first step to correcting it.</p>
+        <textarea class="reflection-textarea" data-reflection-day="6" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+      <div class="direction-panels">
+        <div class="direction-panel direction-panel--right">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>✅ Right Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Calibrating your process to the scale of the work. Delivering great work in 1 day when that's what's needed. Expanding the process when time allows.</p></div>
+        </div>
+        <div class="direction-panel direction-panel--wrong">
+          <div class="direction-panel-header" tabindex="0" role="button"><span>❌ Wrong Direction</span><span class="direction-arrow">▾</span></div>
+          <div class="direction-panel-body"><p>Applying the same "full UX process" to every task regardless of scale. When a PM gives you 1 day and you come back saying "I need 3 weeks to do this properly," you are not being thorough — you are being inflexible. This is a career-limiting pattern at fast-moving product companies.</p></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /day-6 -->
+
+
+  <!-- ══════ DAY 7 — INTEGRATION ══════ -->
+  <div class="accordion-item integration" data-day="7" id="day-7">
+    <div class="accordion-header" tabindex="0" role="button" aria-expanded="false">
+      <div class="accordion-header-left">
+        <label class="checkbox-wrapper" onclick="event.stopPropagation()">
+          <input type="checkbox" class="day-complete-checkbox" data-day-check="7">
+          <span class="checkbox-custom"></span>
+        </label>
+        <div class="accordion-title-group">
+          <span class="accordion-day-num">Day 7</span>
+          <span class="accordion-title">Week 1 Integration Day</span>
+        </div>
+      </div>
+      <div class="accordion-header-right">
+        <span class="badge badge-high">HIGH</span>
+        <span class="accordion-icon" aria-expanded="false">▾</span>
+      </div>
+    </div>
+    <div class="accordion-body">
+      <div class="block-big-idea">
+        <div class="block-header"><span class="block-icon">💡</span><span class="block-label">The Big Idea</span></div>
+        <p>Everything you have learned this week connects. Journey thinking connects to emotion mapping. Emotion mapping connects to business metrics (because emotions drive conversions). Business metrics connect to design decisions. Design decisions need rationale. Rationale needs the scale framework to know how much evidence is required.</p>
+      </div>
+
+      <div class="block-study">
+        <div class="block-header">
+          <span class="block-icon">📖</span><span class="block-label">Study Session</span>
+          <span class="badge badge-duration">2 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="study" data-day="7">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="study-content-wrapper">
+          <h3>Integration — The Thread That Connects Everything</h3>
+
+          <h4>Connecting the Week</h4>
+          <p>Everything from this first week connects into one unified model of how you should think as a designer.</p>
+          <p>It starts with the user as a human being — a person with goals, emotions, and a journey that they are experiencing, not just completing. This is the Manu framework: journey, flow, interactions, decisions, emotions.</p>
+          <p>It runs through your role in the company: you are the person who takes ambiguous input and produces clarity. You operate in a value creation triangle where your design decisions must serve both users and business.</p>
+          <p>It connects to business metrics because emotions drive behavior, and behavior drives metrics. Conversion Rate is high when users feel confident and clear. Retention Rate is high when users feel satisfied. Average Order Value grows when users feel genuinely helped by relevant recommendations at the right moment.</p>
+          <p>It produces design decisions that you can defend with rationale — a formula that explains what you chose, why, what you considered instead, and what outcome you expect.</p>
+          <p>And it operates at different scales depending on the time and resources available.</p>
+
+          <hr>
+
+          <h4>The Mindset to Carry Into Week 2</h4>
+          <p>The shift from Week 1 to Week 2 is from "understanding how to think about experience" to "understanding how to find the right problem to design for." Most designers jump to solutions before they have found the real problem. The discipline of Week 2 is learning to sit with a problem long enough to find its root before you start designing.</p>
+
+          <hr>
+
+          <h4>Integration Review — Re-read Your Reflections</h4>
+          <p>No new material today. Re-read your daily reflections from Days 1–6. Look for patterns:</p>
+          <ul>
+            <li>Where did you struggle most?</li>
+            <li>What concept clicked fastest?</li>
+            <li>What question keeps coming up that you haven't answered yet?</li>
+          </ul>
+          <p>Spend 1 hour re-reading the design rationale formula examples and the scale planning framework from Days 5 and 6. These are the two tools you will use most immediately in your next job.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="study">⏱ Start Study Timer (2h)</button>
+      </div>
+
+      <div class="block-practice">
+        <div class="block-header">
+          <span class="block-icon">🛠️</span><span class="block-label">Practice Session</span>
+          <span class="badge badge-duration">3 hours</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="practice" data-day="7">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="practice-content">
+          <p>Live audit practice. Open one of your existing HR tech products or a competitor product (Darwinbox, Keka, or Rippling). Spend 3 hours using it as a user — ordering things, navigating flows, completing tasks.</p>
+          <p><strong>Write continuously as you go.</strong> Every time you feel anything — confusion, delight, frustration, surprise — write it down immediately. At the end, you should have a messy, unformatted document of raw observations. This is what real audit thinking looks like before it is organized.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="practice">⏱ Start Practice Timer (3h)</button>
+      </div>
+
+      <div class="block-assignment">
+        <div class="block-header">
+          <span class="block-icon">📝</span><span class="block-label">Daily Assignment</span>
+          <span class="badge badge-high">HIGH</span>
+          <span class="badge badge-duration">Full day</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="assignment" data-day="7" data-assignment-id="high-1">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <div class="assignment-content">
+          <p>Take your ESOP grant management project. Rewrite the opening section of its case study using ONLY what you have learned this week.</p>
+          <p>The new opening must include:</p>
+          <ol>
+            <li>The user journey (who is the user, what are they trying to accomplish, where does their journey start and end)</li>
+            <li>3 specific emotions from that journey — one positive, one negative, one that is both (ambivalent)</li>
+            <li>The business metric this project was trying to move</li>
+            <li>Your core design decision and its rationale using the formula from Day 5</li>
+            <li>How you would measure whether the design worked</li>
+          </ol>
+          <p>There is no template for this. You are writing it from the inside out — from the human experience, to the business impact, to the design decision. The output does not need to be polished. It needs to be honest and human-first.</p>
+        </div>
+        <button class="start-timer-btn" data-start-block="assignment">⏱ Start Assignment Timer (4h)</button>
+      </div>
+
+      <div class="block-reflection">
+        <div class="block-header">
+          <span class="block-icon">💭</span><span class="block-label">Reflection</span>
+          <span class="badge badge-duration">30 minutes</span>
+          <label class="checkbox-wrapper" onclick="event.stopPropagation()" style="margin-left:auto">
+            <input type="checkbox" data-block-check="reflection" data-day="7">
+            <span class="checkbox-custom"></span>
+          </label>
+        </div>
+        <p class="reflection-prompt">Look back at your 7 days. Which of the five skills (journey thinking, ambiguity-to-clarity, business metrics, emotion mapping, scale planning) feels most natural now? Which still feels forced? The forced one is your Week 2 priority to practice until it becomes instinctive.</p>
+        <textarea class="reflection-textarea" data-reflection-day="7" placeholder="Write your reflection here... Auto-saved as you type."></textarea>
+        <div class="reflection-saved">Auto-saved ✓</div>
+        <button class="start-timer-btn" data-start-block="reflection">⏱ Start Reflection Timer (30m)</button>
+      </div>
+
+    </div>
+  </div><!-- /day-7 -->
+
+</section><!-- /week-layout -->
+</main>
+
+<!-- FLOATING TIMER -->
+<div class="timer-widget" id="timer-widget">
+  <div class="timer-widget-header">
+    <span class="timer-block-label" id="timer-block-label">Study Session</span>
+    <button class="timer-minimize-btn" id="timer-minimize" aria-label="Minimize timer">−</button>
+  </div>
+
+  <div class="timer-ring-wrap">
+    <svg class="timer-ring" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="45" class="timer-ring-bg"/>
+      <circle cx="50" cy="50" r="45" class="timer-ring-progress" id="timer-ring-progress"/>
+    </svg>
+    <div class="timer-display" id="timer-display">2:00:00</div>
+  </div>
+
+  <div class="timer-blocks">
+    <button class="timer-block-btn active" data-block="study">Study</button>
+    <button class="timer-block-btn" data-block="practice">Practice</button>
+    <button class="timer-block-btn" data-block="assignment">Assignment</button>
+    <button class="timer-block-btn" data-block="reflection">Reflect</button>
+  </div>
+
+  <div class="timer-controls">
+    <button class="timer-btn" id="timer-play" aria-label="Start timer">
+      <span class="play-icon">▶</span>
+      <span class="pause-icon hidden">⏸</span>
+    </button>
+    <button class="timer-btn" id="timer-reset" aria-label="Reset timer">↺</button>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

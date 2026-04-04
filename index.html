@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UX Mastery — 30-Day Roadmap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">UX<span>Mastery</span></a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html"      class="nav-link" aria-label="Dashboard">Dashboard</a>
+      <a href="week1.html"      class="nav-link">Week 1</a>
+      <a href="week2.html"      class="nav-link">Week 2</a>
+      <a href="week3.html"      class="nav-link">Week 3</a>
+      <a href="week4.html"      class="nav-link">Week 4</a>
+      <a href="assignments.html" class="nav-link">Assignments</a>
+      <a href="references.html"  class="nav-link">Reference</a>
+    </nav>
+
+    <div class="header-right">
+      <span class="progress-pill" id="progress-pill">Day 1 of 30</span>
+      <div class="week-dots" aria-hidden="true">
+        <span class="week-dot" id="week-dot-1" title="Week 1"></span>
+        <span class="week-dot" id="week-dot-2" title="Week 2"></span>
+        <span class="week-dot" id="week-dot-3" title="Week 3"></span>
+        <span class="week-dot" id="week-dot-4" title="Week 4"></span>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+  <a href="index.html"      class="nav-link">Dashboard</a>
+  <a href="week1.html"      class="nav-link">Week 1: Human-First Foundation</a>
+  <a href="week2.html"      class="nav-link">Week 2: Problem Finding &amp; Audit</a>
+  <a href="week3.html"      class="nav-link">Week 3: Research, Business &amp; Scale</a>
+  <a href="week4.html"      class="nav-link">Week 4: Communication &amp; Portfolio</a>
+  <a href="assignments.html" class="nav-link">Assignment Bank</a>
+  <a href="references.html"  class="nav-link">Quick Reference</a>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<main>
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow">30-Day Intensive Program</div>
+    <h1 class="page-hero-title">30-Day UX Mastery<br><span class="text-gradient">Roadmap</span></h1>
+    <p class="page-hero-subtitle">Target: 25 LPA+ UX / Product Designer Roles</p>
+    <div class="hero-stats-row">
+      <div class="hero-stat"><span class="hero-stat-val">10 hrs</span><span class="hero-stat-label">per day</span></div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat"><span class="hero-stat-val">300</span><span class="hero-stat-label">total hours</span></div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat"><span class="hero-stat-val">4</span><span class="hero-stat-label">phases</span></div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat"><span class="hero-stat-val">26</span><span class="hero-stat-label">assignments</span></div>
+    </div>
+    <a href="week1.html#day-1" class="btn btn-primary" id="continue-btn">Begin Day 1 →</a>
+  </div>
+  <div class="hero-gradient-line"></div>
+</section>
+
+<!-- ══════════════════════════════════════
+     GLOBAL TIMELINE
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Your 30-Day Journey</h2>
+      <p class="section-subtitle">Click any day to jump directly to that lesson</p>
+    </div>
+
+    <div class="global-timeline">
+
+      <!-- Week 1 -->
+      <div class="tl-week">
+        <div class="tl-week-label" style="color:var(--week1-color)">Week 1 — Human-First Foundation</div>
+        <div class="tl-days">
+          <div class="tl-day tl-empty" data-timeline-day="1" title="Day 1: What UX Actually Is"><span>1</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="2" title="Day 2: Ambiguity to Clarity"><span>2</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="3" title="Day 3: Business Metrics"><span>3</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="4" title="Day 4: Emotion Mapping"><span>4</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="5" title="Day 5: Presenting Decisions"><span>5</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="6" title="Day 6: Project Scale Planning"><span>6</span></div>
+          <div class="tl-day tl-empty tl-integration" data-timeline-day="7" title="Day 7: Week 1 Integration"><span>7</span></div>
+        </div>
+      </div>
+
+      <!-- Week 2 -->
+      <div class="tl-week">
+        <div class="tl-week-label" style="color:var(--week2-color)">Week 2 — Problem Finding &amp; Audit</div>
+        <div class="tl-days">
+          <div class="tl-day tl-empty" data-timeline-day="8"  title="Day 8: The 3-Layer UX Audit"><span>8</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="9"  title="Day 9: Root Cause Thinking"><span>9</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="10" title="Day 10: Emotion-First Ideation"><span>10</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="11" title="Day 11: Divergent &amp; Convergent"><span>11</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="12" title="Day 12: Wireframing as Thinking"><span>12</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="13" title="Day 13: Story-First IA"><span>13</span></div>
+          <div class="tl-day tl-empty tl-integration" data-timeline-day="14" title="Day 14: Week 2 Integration"><span>14</span></div>
+        </div>
+      </div>
+
+      <!-- Week 3 -->
+      <div class="tl-week">
+        <div class="tl-week-label" style="color:var(--week3-color)">Week 3 — Research, Business &amp; Scale</div>
+        <div class="tl-days">
+          <div class="tl-day tl-empty" data-timeline-day="15" title="Day 15: Lean Research"><span>15</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="16" title="Day 16: Research Ethics"><span>16</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="17" title="Day 17: Business Language"><span>17</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="18" title="Day 18: Design Rationale Deep Dive"><span>18</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="19" title="Day 19: Scale Planning Deep Dive"><span>19</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="20" title="Day 20: Scale Planning Applied"><span>20</span></div>
+          <div class="tl-day tl-empty tl-integration" data-timeline-day="21" title="Day 21: Week 3 Integration"><span>21</span></div>
+        </div>
+      </div>
+
+      <!-- Week 4 -->
+      <div class="tl-week">
+        <div class="tl-week-label" style="color:var(--week4-color)">Week 4 — Communication, Portfolio &amp; Interview</div>
+        <div class="tl-days">
+          <div class="tl-day tl-empty" data-timeline-day="22" title="Day 22: The 5 Case Study Formats"><span>22</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="23" title="Day 23: Decision Stories"><span>23</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="24" title="Day 24: Scan-Worthy Portfolio"><span>24</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="25" title="Day 25: Stakeholder Pushback"><span>25</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="26" title="Day 26: Verbal Case Study"><span>26</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="27" title="Day 27: Inbound Lead Strategy"><span>27</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="28" title="Day 28: Mock Interview — Scan Phase"><span>28</span></div>
+          <div class="tl-day tl-empty" data-timeline-day="29" title="Day 29: Mock Interview — Scrutiny Phase"><span>29</span></div>
+          <div class="tl-day tl-empty tl-integration" data-timeline-day="30" title="Day 30: Final Integration"><span>30</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Completion stats -->
+    <div class="timeline-stats">
+      <div class="tl-stat">
+        <div class="tl-stat-row">
+          <span class="tl-stat-label">Days completed</span>
+          <span class="tl-stat-val"><span id="stat-days">0</span> / 30</span>
+        </div>
+        <div class="progress-bar-track"><div class="progress-bar-fill" id="progress-bar-days" style="width:0%" aria-valuenow="0"></div></div>
+      </div>
+      <div class="tl-stat">
+        <div class="tl-stat-row">
+          <span class="tl-stat-label">Assignments completed</span>
+          <span class="tl-stat-val"><span id="stat-assignments">0</span> / 26</span>
+        </div>
+        <div class="progress-bar-track"><div class="progress-bar-fill progress-bar-fill--green" id="progress-bar-assignments" style="width:0%" aria-valuenow="0"></div></div>
+      </div>
+      <div class="tl-stat">
+        <div class="tl-stat-row">
+          <span class="tl-stat-label">Reflections written</span>
+          <span class="tl-stat-val"><span id="stat-reflections">0</span> / 30</span>
+        </div>
+        <div class="progress-bar-track"><div class="progress-bar-fill progress-bar-fill--purple" id="progress-bar-reflections" style="width:0%" aria-valuenow="0"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WEEK CARDS
+══════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">The Four Phases</h2>
+    </div>
+    <div class="week-cards-grid">
+
+      <a href="week1.html" class="week-card" style="--week-color:var(--week1-color)">
+        <div class="week-card-num">Week 1</div>
+        <h3 class="week-card-title">Human-First Foundation</h3>
+        <p class="week-card-days">Days 1–7</p>
+        <p class="week-card-desc">Build the mental model of what UX actually is. Not the textbook version. The version that makes a 25 LPA company sit up when you walk into a room.</p>
+        <div class="week-card-progress">
+          <div class="week-card-progress-row">
+            <span><span id="week-count-1">0</span>/7 days</span>
+          </div>
+          <div class="progress-bar-track"><div class="progress-bar-fill" id="week-progress-1" style="width:0%"></div></div>
+        </div>
+        <div class="week-card-cta">Open Week 1 →</div>
+      </a>
+
+      <a href="week2.html" class="week-card" style="--week-color:var(--week2-color)">
+        <div class="week-card-num">Week 2</div>
+        <h3 class="week-card-title">Problem Finding &amp; The Audit</h3>
+        <p class="week-card-days">Days 8–14</p>
+        <p class="week-card-desc">Build the ability to look at any product and immediately see what is broken. This is the skill that separates designers who ship features from designers who solve problems.</p>
+        <div class="week-card-progress">
+          <div class="week-card-progress-row">
+            <span><span id="week-count-2">0</span>/7 days</span>
+          </div>
+          <div class="progress-bar-track"><div class="progress-bar-fill progress-bar-fill--blue" id="week-progress-2" style="width:0%"></div></div>
+        </div>
+        <div class="week-card-cta">Open Week 2 →</div>
+      </a>
+
+      <a href="week3.html" class="week-card" style="--week-color:var(--week3-color)">
+        <div class="week-card-num">Week 3</div>
+        <h3 class="week-card-title">Research, Business Language &amp; Scale</h3>
+        <p class="week-card-days">Days 15–21</p>
+        <p class="week-card-desc">Do real research, speak stakeholder language, and plan at any scale. This is where you start to think and operate like a senior designer.</p>
+        <div class="week-card-progress">
+          <div class="week-card-progress-row">
+            <span><span id="week-count-3">0</span>/7 days</span>
+          </div>
+          <div class="progress-bar-track"><div class="progress-bar-fill progress-bar-fill--purple" id="week-progress-3" style="width:0%"></div></div>
+        </div>
+        <div class="week-card-cta">Open Week 3 →</div>
+      </a>
+
+      <a href="week4.html" class="week-card" style="--week-color:var(--week4-color)">
+        <div class="week-card-num">Week 4</div>
+        <h3 class="week-card-title">Communication, Portfolio &amp; Interview</h3>
+        <p class="week-card-days">Days 22–30</p>
+        <p class="week-card-desc">Package everything into interview-ready formats. Case studies, verbal walkthroughs, stakeholder pushback — the final mile between great work and a great offer.</p>
+        <div class="week-card-progress">
+          <div class="week-card-progress-row">
+            <span><span id="week-count-4">0</span>/9 days</span>
+          </div>
+          <div class="progress-bar-track"><div class="progress-bar-fill progress-bar-fill--pink" id="week-progress-4" style="width:0%"></div></div>
+        </div>
+        <div class="week-card-cta">Open Week 4 →</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     HOW THIS PLAN WORKS
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">How This Plan Works</h2>
+      <p class="section-subtitle">Every day has five parts. Same structure, different depth, every day for 30 days.</p>
+    </div>
+
+    <div class="how-it-works-grid">
+      <div class="how-block">
+        <div class="how-block-icon">💡</div>
+        <div class="how-block-label">The Big Idea</div>
+        <div class="how-block-desc">One core concept to absorb — not memorize, understand.</div>
+      </div>
+      <div class="how-block-arrow">→</div>
+      <div class="how-block">
+        <div class="how-block-icon">📖</div>
+        <div class="how-block-label">Study Session</div>
+        <div class="how-block-desc">Read the lesson. This is your primary material — 2 hours.</div>
+      </div>
+      <div class="how-block-arrow">→</div>
+      <div class="how-block">
+        <div class="how-block-icon">🛠️</div>
+        <div class="how-block-label">Practice Session</div>
+        <div class="how-block-desc">Apply the concept immediately on a real product — 3 hours.</div>
+      </div>
+      <div class="how-block-arrow">→</div>
+      <div class="how-block">
+        <div class="how-block-icon">📝</div>
+        <div class="how-block-label">Daily Assignment</div>
+        <div class="how-block-desc">Your main output — SHORT, MEDIUM, or HIGH — 3–4 hours.</div>
+      </div>
+      <div class="how-block-arrow">→</div>
+      <div class="how-block">
+        <div class="how-block-icon">💭</div>
+        <div class="how-block-label">Reflection</div>
+        <div class="how-block-desc">Write what clicked and what confused you — 30 minutes.</div>
+      </div>
+    </div>
+
+    <!-- Daily schedule table -->
+    <div class="schedule-table-wrap">
+      <table class="schedule-table">
+        <thead>
+          <tr><th>Block</th><th>Duration</th><th>Activity</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🌅 Morning</td><td>2 hours</td><td>Study session — read, absorb, annotate the lesson</td></tr>
+          <tr><td>☀️ Mid-morning</td><td>3 hours</td><td>Practice session — apply the concept on a real product</td></tr>
+          <tr><td>🌤️ Afternoon</td><td>3–4 hours</td><td>Assignment execution</td></tr>
+          <tr><td>🌙 Evening</td><td>30–60 min</td><td>Reflection + review what you built</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PRIORITY FRAMEWORK
+══════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">The Priority Framework</h2>
+      <p class="section-subtitle">AI will automate the execution of UX work. It cannot automate the thinking behind it. Invest accordingly.</p>
+    </div>
+
+    <div class="priority-grid">
+      <!-- Tier 1 -->
+      <div class="priority-tier tier-1">
+        <div class="tier-badge">Tier 1</div>
+        <h3 class="tier-title">Human-Only Skills</h3>
+        <p class="tier-sub">Highest priority · Deepest practice</p>
+        <ul class="tier-list">
+          <li>Reading the emotion behind user behavior, not just the click data</li>
+          <li>Knowing which user pain is real vs. stated</li>
+          <li>Contextual judgment in ambiguous, messy, real-world situations</li>
+          <li>Finding the root cause of a problem, not just the surface symptom</li>
+          <li>Making confident decisions when data is incomplete</li>
+          <li>Building trust in real conversations with stakeholders and users</li>
+        </ul>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="priority-tier tier-2">
+        <div class="tier-badge">Tier 2</div>
+        <h3 class="tier-title">Business-Critical Skills</h3>
+        <p class="tier-sub">Second priority</p>
+        <ul class="tier-list">
+          <li>Speaking the language of metrics — CR, AOV, Retention, DAU</li>
+          <li>Translating any business input into a user-centered design direction</li>
+          <li>Planning projects of any scale — from 1-day sprint to 3-month roadmap</li>
+          <li>Presenting and defending design decisions to stakeholders</li>
+        </ul>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="priority-tier tier-3">
+        <div class="tier-badge">Tier 3</div>
+        <h3 class="tier-title">Craft + Packaging Skills</h3>
+        <p class="tier-sub">Third priority</p>
+        <ul class="tier-list">
+          <li>UX audit execution</li>
+          <li>Case study writing — all 5 formats</li>
+          <li>Portfolio scan-worthiness</li>
+          <li>Verbal case study preparation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SKILL RADAR CHART
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Skill Self-Assessment</h2>
+      <p class="section-subtitle">Rate yourself honestly. The chart updates in real time. This is your baseline — come back and re-rate at the end of the 30 days.</p>
+    </div>
+
+    <div class="radar-layout">
+      <div class="radar-chart-wrap">
+        <canvas id="radar-canvas" width="400" height="400" aria-label="Skill radar chart"></canvas>
+      </div>
+
+      <div class="radar-sliders">
+        <div class="skill-slider-row">
+          <div class="skill-slider-header">
+            <label for="skill-emotionReading" class="skill-label">Emotion Reading</label>
+            <span class="skill-val" id="skill-val-emotionReading">1</span>
+          </div>
+          <input type="range" id="skill-emotionReading" min="1" max="5" step="1" value="1" class="skill-range">
+          <div class="skill-range-labels"><span>Beginner</span><span>Expert</span></div>
+        </div>
+
+        <div class="skill-slider-row">
+          <div class="skill-slider-header">
+            <label for="skill-rootCauseThinking" class="skill-label">Root Cause Thinking</label>
+            <span class="skill-val" id="skill-val-rootCauseThinking">1</span>
+          </div>
+          <input type="range" id="skill-rootCauseThinking" min="1" max="5" step="1" value="1" class="skill-range">
+          <div class="skill-range-labels"><span>Beginner</span><span>Expert</span></div>
+        </div>
+
+        <div class="skill-slider-row">
+          <div class="skill-slider-header">
+            <label for="skill-businessMetrics" class="skill-label">Business Metrics Fluency</label>
+            <span class="skill-val" id="skill-val-businessMetrics">1</span>
+          </div>
+          <input type="range" id="skill-businessMetrics" min="1" max="5" step="1" value="1" class="skill-range">
+          <div class="skill-range-labels"><span>Beginner</span><span>Expert</span></div>
+        </div>
+
+        <div class="skill-slider-row">
+          <div class="skill-slider-header">
+            <label for="skill-stakeholderComm" class="skill-label">Stakeholder Communication</label>
+            <span class="skill-val" id="skill-val-stakeholderComm">1</span>
+          </div>
+          <input type="range" id="skill-stakeholderComm" min="1" max="5" step="1" value="1" class="skill-range">
+          <div class="skill-range-labels"><span>Beginner</span><span>Expert</span></div>
+        </div>
+
+        <div class="skill-slider-row">
+          <div class="skill-slider-header">
+            <label for="skill-uxAudit" class="skill-label">UX Audit Execution</label>
+            <span class="skill-val" id="skill-val-uxAudit">1</span>
+          </div>
+          <input type="range" id="skill-uxAudit" min="1" max="5" step="1" value="1" class="skill-range">
+          <div class="skill-range-labels"><span>Beginner</span><span>Expert</span></div>
+        </div>
+
+        <div class="skill-slider-row">
+          <div class="skill-slider-header">
+            <label for="skill-caseStudy" class="skill-label">Case Study &amp; Portfolio</label>
+            <span class="skill-val" id="skill-val-caseStudy">1</span>
+          </div>
+          <input type="range" id="skill-caseStudy" min="1" max="5" step="1" value="1" class="skill-range">
+          <div class="skill-range-labels"><span>Beginner</span><span>Expert</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     AI USAGE GUIDE
+══════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">AI Usage Guide</h2>
+      <p class="section-subtitle">AI is a thinking partner, not a thinking replacement.</p>
+    </div>
+
+    <div class="ai-grid">
+      <div class="ai-panel ai-panel--do">
+        <h3 class="ai-panel-title">✅ Use AI for</h3>
+        <ul class="ai-list">
+          <li>Writing and polishing design rationale after you have decided the direction</li>
+          <li>Generating rough research scripts to refine yourself</li>
+          <li>Checking your work against heuristics after you have formed your own view</li>
+          <li>Pattern research — "what are common patterns for X type of screen?"</li>
+          <li>Writing case study prose once you have the story structure</li>
+          <li>Generating stakeholder presentation scripts</li>
+          <li>Brainstorming second-order ideas after you have your primary idea</li>
+        </ul>
+      </div>
+
+      <div class="ai-panel ai-panel--dont">
+        <h3 class="ai-panel-title">❌ Don't use AI for</h3>
+        <ul class="ai-list">
+          <li>Generating your design ideas before you have formed your own</li>
+          <li>Replacing real user observation or qualitative research</li>
+          <li>Deciding your design direction — AI cannot feel the user's emotion</li>
+          <li>Writing your reflection journal — that defeats its purpose entirely</li>
+          <li>Any exercise where the thinking IS the point of the exercise</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ai-rule">
+      "AI is a thinking partner, not a thinking replacement."
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-rainbow"></div>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="site-logo">UX<span>Mastery</span></span>
+        <p class="footer-tagline">Built from UX Anudeep's frameworks. 30 days. 300 hours. One goal.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Dashboard</a>
+        <a href="week1.html">Week 1</a>
+        <a href="week2.html">Week 2</a>
+        <a href="week3.html">Week 3</a>
+        <a href="week4.html">Week 4</a>
+        <a href="assignments.html">Assignments</a>
+        <a href="references.html">Reference</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

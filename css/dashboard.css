@@ -1,0 +1,164 @@
+.global-timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.tl-week,
+.timeline-stat-card,
+.daily-schedule,
+.ai-rule {
+  background: rgba(255,255,255,0.82);
+  border: var(--border-card);
+  border-radius: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.tl-week {
+  padding: 22px 24px;
+}
+
+.tl-week-label {
+  margin-bottom: 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.tl-days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tl-day {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface-soft);
+  border: var(--border-card);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+}
+
+.tl-integration {
+  background: var(--gradient-gold);
+}
+
+.timeline-stats,
+.week-cards-grid,
+.how-it-works-blocks,
+.priority-tiers,
+.ai-usage-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.timeline-stats,
+.priority-tiers,
+.ai-usage-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.week-cards-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.how-it-works-blocks {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.week-card {
+  padding: 28px;
+}
+
+.week-card-num {
+  margin-bottom: 14px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.week-card-cta {
+  margin-top: 18px;
+  color: var(--retro-blue);
+  font-weight: var(--font-semibold);
+}
+
+.timeline-stat-card,
+.how-block,
+.tier-card,
+.ai-panel {
+  padding: 24px;
+}
+
+.how-block {
+  background: rgba(255,255,255,0.82);
+  border: var(--border-card);
+  border-radius: 28px;
+  text-align: left;
+  box-shadow: var(--shadow-sm);
+}
+
+.how-block-label,
+.how-block-title {
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  font-weight: var(--font-semibold);
+}
+
+.daily-schedule {
+  margin-top: var(--space-8);
+  overflow: hidden;
+}
+
+.daily-schedule-row {
+  display: grid;
+  grid-template-columns: 160px 120px 1fr;
+  gap: 16px;
+  padding: 18px 22px;
+  border-bottom: var(--border-subtle);
+}
+
+.daily-schedule-row:last-child {
+  border-bottom: 0;
+}
+
+.radar-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.ai-panel-do { background: rgba(232, 244, 238, 0.88); }
+.ai-panel-dont { background: rgba(255, 241, 232, 0.88); }
+
+@media (max-width: 1024px) {
+  .timeline-stats,
+  .week-cards-grid,
+  .priority-tiers,
+  .ai-usage-grid,
+  .radar-section {
+    grid-template-columns: 1fr;
+  }
+
+  .how-it-works-blocks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .how-it-works-blocks {
+    grid-template-columns: 1fr;
+  }
+
+  .daily-schedule-row {
+    grid-template-columns: 1fr;
+  }
+}
