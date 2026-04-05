@@ -73,6 +73,7 @@ const Navigation = {
       hamburger.setAttribute('aria-expanded', 'true');
       hamburger.classList.add('open');
     }
+    document.body.classList.add('mobile-menu-open');
     document.body.style.overflow = 'hidden';
   },
 
@@ -90,6 +91,7 @@ const Navigation = {
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.classList.remove('open');
     }
+    document.body.classList.remove('mobile-menu-open');
     document.body.style.overflow = '';
   },
 

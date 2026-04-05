@@ -176,6 +176,22 @@ img {
   display: block;
 }
 
+canvas,
+svg,
+video,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+}
+
+canvas,
+svg,
+video {
+  height: auto;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

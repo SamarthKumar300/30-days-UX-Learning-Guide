@@ -627,11 +627,21 @@
   .accordion-header {
     padding: 22px 20px;
     align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .accordion-header-left,
+  .accordion-header-text,
+  .accordion-title-group {
+    width: 100%;
   }
 
   .accordion-header-right,
   .accordion-header-meta {
     gap: 10px;
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .accordion-body > *,

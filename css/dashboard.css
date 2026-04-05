@@ -136,6 +136,28 @@
   align-items: center;
 }
 
+.radar-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.radar-chart-wrap {
+  width: min(100%, 420px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+#radar-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.radar-sliders {
+  min-width: 0;
+}
+
 .ai-panel-do { background: rgba(232, 244, 238, 0.88); }
 .ai-panel-dont { background: rgba(255, 241, 232, 0.88); }
 
@@ -151,6 +173,14 @@
   .how-it-works-blocks {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .radar-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .radar-chart-wrap {
+    width: min(100%, 360px);
+  }
 }
 
 @media (max-width: 640px) {
@@ -160,5 +190,13 @@
 
   .daily-schedule-row {
     grid-template-columns: 1fr;
+  }
+
+  .radar-layout {
+    gap: 20px;
+  }
+
+  .radar-chart-wrap {
+    width: min(100%, 300px);
   }
 }
