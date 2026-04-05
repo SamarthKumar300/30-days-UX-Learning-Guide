@@ -575,29 +575,49 @@
 }
 
 .timer-widget.minimized {
-  width: 64px;
-  height: 64px;
+  width: 84px;
+  height: 84px;
   border-radius: 999px;
   padding: 0;
+  background: var(--gradient-button);
+  border: 0;
+  box-shadow: var(--shadow-glow-blue);
+  overflow: hidden;
 }
 
-.timer-widget.minimized .timer-widget-header,
 .timer-widget.minimized .timer-widget-body,
-.timer-widget.minimized .timer-header,
 .timer-widget.minimized .timer-body,
 .timer-widget.minimized .timer-ring-wrap {
   display: none;
 }
 
-.timer-widget.minimized .timer-fab {
+.timer-widget.minimized .timer-widget-header,
+.timer-widget.minimized .timer-header {
   display: flex;
-  width: 64px;
-  height: 64px;
+  width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
-  background: var(--gradient-button);
+  padding: 0;
   color: #fff;
-  border-radius: inherit;
+  border-bottom: 0;
+  cursor: pointer;
+}
+
+.timer-widget.minimized .timer-minimize-btn {
+  display: none;
+}
+
+.timer-widget.minimized .timer-widget-title,
+.timer-widget.minimized .timer-title,
+.timer-widget.minimized .timer-block-label,
+.timer-widget.minimized .timer-block-name {
+  font-size: 0.82rem;
+  font-weight: var(--font-semibold);
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fff;
+  text-align: center;
 }
 
 .timer-fab,

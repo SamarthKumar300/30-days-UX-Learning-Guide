@@ -30,12 +30,14 @@ const Timer = {
 
     this._widget = widget;
     this._display = widget.querySelector('#timer-display');
+    this._header = widget.querySelector('.timer-widget-header, .timer-header');
     this._blockBtns = widget.querySelectorAll('[data-block]');
     this._playBtn = widget.querySelector('#timer-play, #timer-play-btn');
     this._resetBtn = widget.querySelector('#timer-reset, #timer-reset-btn');
     this._minimizeBtn = widget.querySelector('#timer-minimize, #timer-minimize-btn');
     this._svgCircle = widget.querySelector('#timer-ring-progress');
     this._blockLabel = widget.querySelector('#timer-block-label, #timer-block-name');
+    this._titleLabel = widget.querySelector('.timer-widget-title, .timer-title');
 
     this._loadState();
     this._render();
@@ -85,6 +87,14 @@ const Timer = {
 
     if (this._minimizeBtn) {
       this._minimizeBtn.addEventListener('click', () => this._toggleMinimize());
+    }
+
+    if (this._header) {
+      this._header.addEventListener('click', event => {
+        if (!this._minimized) return;
+        if (event.target === this._minimizeBtn) return;
+        this._toggleMinimize();
+      });
     }
   },
 
@@ -202,7 +212,13 @@ const Timer = {
       : `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 
     if (this._display) this._display.textContent = timeStr;
-    if (this._blockLabel) this._blockLabel.textContent = BLOCK_LABELS[this._block];
+    if (this._blockLabel) {
+      const labelText = this._minimized && !this._titleLabel ? 'Timer' : BLOCK_LABELS[this._block];
+      this._blockLabel.textContent = labelText;
+    }
+    if (this._titleLabel) {
+      this._titleLabel.textContent = this._minimized ? 'Timer' : `${BLOCK_LABELS[this._block]} Timer`;
+    }
 
     // SVG ring progress
     if (this._svgCircle) {
@@ -232,6 +248,7 @@ const Timer = {
     if (this._minimizeBtn) {
       this._minimizeBtn.setAttribute('aria-label', this._minimized ? 'Expand timer' : 'Minimize timer');
     }
+    this._render();
   },
 
   _expand() {
