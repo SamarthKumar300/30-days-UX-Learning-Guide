@@ -1,6 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
+  "functions": {
+    "api/chat/index.js": {
+      "includeFiles": "{Day-wise-content.md,V2-guidebook-plan.md,PDF-coverage-audit.md}"
+    }
+  },
   "headers": [
     {
       "source": "/api/(.*)",
