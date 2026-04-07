@@ -1,6 +1,4 @@
-*.md
 *.pdf
-**/*.md
 **/*.pdf
 
 # Local agent / editor settings
