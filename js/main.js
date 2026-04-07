@@ -1,9 +1,9 @@
 import Navigation from './navigation.js';
 import AudioReader from './audio-reader.js';
 import Accordion from './accordion.js';
-import Timer from './timer.js';
 import Progress from './progress.js';
 import AssignmentsFilter from './assignments-filter.js';
+import CodexBot from './codex-bot.js';
 import { renderPage } from './v2-renderer.js';
 
 const page = window.location.pathname.split('/').pop() || 'index.html';
@@ -21,10 +21,10 @@ async function init() {
   Navigation.init();
   Progress.init();
   AudioReader.init();
+  CodexBot.init();
 
   if (isWeekPage()) {
     Accordion.init();
-    Timer.init();
   }
 
   if (page === 'assignments.html') {

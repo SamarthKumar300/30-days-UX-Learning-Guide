@@ -3,7 +3,7 @@
  * Single source of truth for all persisted data
  */
 
-import { TOTAL_DAYS, TOTAL_WEEKS, WEEK_DEFINITIONS } from './course-config.js';
+import { TOTAL_DAYS, WEEK_DEFINITIONS } from './course-config.js';
 
 const STORAGE_KEY = 'ux-mastery-v2';
 
@@ -36,11 +36,6 @@ const DEFAULT_STATE = {
     stakeholderComm: 1,
     uxAudit: 1,
     caseStudy: 1,
-  },
-  timer: {
-    activeBlock: 'study',
-    remaining: 7200, // seconds (2h)
-    isRunning: false,
   },
   startDate: getLocalISODate(1),
   currentDay: 1,

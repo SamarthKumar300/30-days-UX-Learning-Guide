@@ -156,7 +156,6 @@ function renderDayAccordion(day) {
             </label>
           </div>
           <div class="practice-content">${systemCards}</div>
-          <button class="start-timer-btn" data-start-block="practice">Start Systems Timer</button>
         </div>
   ` : '';
   const assignmentBlock = assignmentHtml ? `
@@ -170,7 +169,6 @@ function renderDayAccordion(day) {
             </label>
           </div>
           <div class="assignment-content markdown-content">${assignmentHtml}</div>
-          <button class="start-timer-btn" data-start-block="assignment">Start Assignment Timer</button>
         </div>
   ` : '';
 
@@ -203,7 +201,6 @@ function renderDayAccordion(day) {
             </label>
           </div>
           ${renderStudyContent(day)}
-          <button class="start-timer-btn" data-start-block="study">Start Guide Timer</button>
         </div>
         ${practiceBlock}
         ${assignmentBlock}
@@ -213,30 +210,40 @@ function renderDayAccordion(day) {
   `;
 }
 
-function renderTimerWidget() {
+function renderCodexBotShell() {
   return `
-    <div class="timer-widget" id="timer-widget">
-      <div class="timer-widget-header">
-        <span class="timer-block-label" id="timer-block-label">Guidebook Breakdown</span>
-        <button class="timer-minimize-btn" id="timer-minimize" aria-label="Minimize timer">-</button>
-      </div>
-      <div class="timer-ring-wrap">
-        <svg class="timer-ring" viewBox="0 0 100 100" aria-hidden="true">
-          <circle cx="50" cy="50" r="45" class="timer-ring-bg"></circle>
-          <circle cx="50" cy="50" r="45" class="timer-ring-progress" id="timer-ring-progress"></circle>
-        </svg>
-        <div class="timer-display" id="timer-display">2:00:00</div>
-      </div>
-      <div class="timer-blocks">
-        <button class="timer-block-btn active" data-block="study">Guide</button>
-        <button class="timer-block-btn" data-block="practice">Systems</button>
-        <button class="timer-block-btn" data-block="assignment">Task</button>
-        <button class="timer-block-btn" data-block="reflection">Readiness</button>
-      </div>
-      <div class="timer-controls">
-        <button class="timer-btn" id="timer-play" aria-label="Start timer"><span class="play-icon">></span><span class="pause-icon hidden">||</span></button>
-        <button class="timer-btn" id="timer-reset" aria-label="Reset timer">reset</button>
-      </div>
+    <div class="codex-bot-shell" id="codex-bot-shell">
+      <button class="codex-bot-fab" id="codex-bot-fab" aria-label="Open Codex bot" aria-expanded="false" aria-controls="codex-bot-panel">
+        <span class="codex-bot-fab-label">Codex</span>
+      </button>
+      <section class="codex-bot-panel" id="codex-bot-panel" aria-label="Codex bot" aria-hidden="true">
+        <div class="codex-bot-panel-header">
+          <div>
+            <p class="codex-bot-kicker">Private assistant</p>
+            <h2 class="codex-bot-title">Codex Bot</h2>
+          </div>
+          <button class="codex-bot-close" id="codex-bot-close" aria-label="Close Codex bot">×</button>
+        </div>
+        <div class="codex-bot-auth" id="codex-bot-auth">
+          <p class="codex-bot-auth-copy">Unlock the bot with your private access secret.</p>
+          <form class="codex-bot-auth-form" id="codex-bot-auth-form">
+            <input class="codex-bot-input" id="codex-bot-secret" type="password" autocomplete="current-password" placeholder="Enter private access secret" required>
+            <button class="btn btn-primary codex-bot-auth-btn" type="submit">Unlock</button>
+          </form>
+          <p class="codex-bot-status" id="codex-bot-auth-status" aria-live="polite"></p>
+        </div>
+        <div class="codex-bot-chat hidden" id="codex-bot-chat">
+          <div class="codex-bot-messages" id="codex-bot-messages" aria-live="polite"></div>
+          <form class="codex-bot-composer" id="codex-bot-form">
+            <textarea class="codex-bot-input codex-bot-textarea" id="codex-bot-message" placeholder="Ask about the current lesson, framework, or interview concept..." rows="3" required></textarea>
+            <div class="codex-bot-actions">
+              <button class="btn btn-secondary" type="button" id="codex-bot-clear">Clear</button>
+              <button class="btn btn-primary" type="submit" id="codex-bot-send">Ask</button>
+            </div>
+          </form>
+          <p class="codex-bot-status" id="codex-bot-chat-status" aria-live="polite"></p>
+        </div>
+      </section>
     </div>
   `;
 }
@@ -373,6 +380,7 @@ function renderDashboard(plan) {
         </div>
       </section>
     </main>
+    ${renderCodexBotShell()}
     ${createFooter()}
   `;
 }
@@ -399,7 +407,7 @@ function renderWeekPage(plan, weekNumber) {
       </section>
       <section class="week-layout container">${week.days.map(renderDayAccordion).join('')}</section>
     </main>
-    ${renderTimerWidget()}
+    ${renderCodexBotShell()}
     ${createFooter()}
   `;
 }
@@ -476,6 +484,7 @@ function renderAssignments(plan) {
         </div>
       </section>
     </main>
+    ${renderCodexBotShell()}
     ${createFooter()}
   `;
 }
@@ -540,6 +549,7 @@ function renderReferences(plan) {
         </aside>
       </section>
     </main>
+    ${renderCodexBotShell()}
     ${createFooter()}
   `;
 }

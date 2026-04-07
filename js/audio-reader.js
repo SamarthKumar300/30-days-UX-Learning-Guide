@@ -200,8 +200,8 @@ const AudioReader = {
       this.ui.rateSelect.appendChild(option);
     });
 
-    if (document.getElementById('timer-widget')) {
-      document.body.classList.add('has-audio-reader-timer');
+    if (document.getElementById('codex-bot-fab')) {
+      document.body.classList.add('has-audio-reader-codex');
     }
   },
 
@@ -390,7 +390,7 @@ const AudioReader = {
   _isReadableNode(element, textNode) {
     const ignoredTags = ['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA', 'INPUT', 'SELECT', 'OPTION', 'BUTTON'];
     if (ignoredTags.includes(element.tagName)) return false;
-    if (element.closest('.audio-reader, .audio-selection-action, .mobile-drawer, .timer-widget')) return false;
+    if (element.closest('.audio-reader, .audio-selection-action, .mobile-drawer, .codex-bot-shell')) return false;
     if (element.closest('[aria-hidden="true"], [hidden], .visually-hidden')) return false;
     if (element.closest('.accordion-body') && !element.closest('.accordion-item.open')) return false;
 

@@ -38,6 +38,8 @@ global.fetch = async (requestPath) => ({
     ['week8 includes day 56', outputs['week8.html'].includes('id="day-56"')],
     ['dashboard mentions 8-Week UX Mastery', outputs['index.html'].includes('8-Week UX Mastery')],
     ['week1 renders parsed day-wise sections', outputs['week1.html'].includes('study-tab-section')],
+    ['global codex bot shell renders', outputs['index.html'].includes('codex-bot-shell') && outputs['week1.html'].includes('codex-bot-shell')],
+    ['timer widget removed from week pages', !outputs['week1.html'].includes('timer-widget')],
   ];
 
   let failed = false;

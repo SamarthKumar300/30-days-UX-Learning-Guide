@@ -347,23 +347,6 @@
 .block-reflection .block-header,
 .reflection-block .block-header { background: var(--surface-lilac, #efe9ff); }
 
-.start-timer-btn,
-.timer-start-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 42px;
-  padding: 0 16px;
-  margin: 0 22px 22px;
-  border-radius: 999px;
-  border: var(--border-card);
-  background: #fff;
-  color: var(--text-primary);
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  cursor: pointer;
-}
-
 .reflection-prompt {
   margin: 22px 22px 14px;
   padding: 18px 20px;
@@ -661,8 +644,170 @@
 .progress-bar-fill--purple { background: var(--gradient-purple); }
 .progress-bar-fill--pink { background: var(--gradient-pink); }
 
-body.has-audio-reader {
+body.has-audio-reader,
+body.has-audio-reader-codex {
   padding-bottom: 124px;
+}
+
+.codex-bot-shell {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: var(--z-overlay);
+}
+
+.codex-bot-fab {
+  min-width: 84px;
+  height: 84px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--gradient-button);
+  color: #fff;
+  box-shadow: var(--shadow-glow-blue);
+  cursor: pointer;
+  font: inherit;
+  font-weight: var(--font-semibold);
+}
+
+.codex-bot-panel {
+  position: absolute;
+  right: 0;
+  bottom: 104px;
+  width: min(420px, calc(100vw - 32px));
+  max-height: min(720px, calc(100vh - 132px));
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(255,255,255,0.95);
+  border: var(--border-card);
+  border-radius: 30px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(16px);
+}
+
+.codex-bot-panel.open {
+  display: flex;
+}
+
+.codex-bot-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 22px 16px;
+  border-bottom: 1px solid rgba(23,23,23,0.06);
+}
+
+.codex-bot-kicker {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: var(--font-semibold);
+}
+
+.codex-bot-title {
+  margin-top: 4px;
+  font-size: 1.35rem;
+}
+
+.codex-bot-close {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  border: var(--border-card);
+  background: #fff;
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.codex-bot-auth,
+.codex-bot-chat {
+  padding: 20px 22px 22px;
+}
+
+.codex-bot-auth-form,
+.codex-bot-composer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.codex-bot-input {
+  width: 100%;
+  border-radius: 20px;
+  border: var(--border-card);
+  background: var(--bg-input);
+  color: var(--text-primary);
+  font: inherit;
+  padding: 16px 18px;
+}
+
+.codex-bot-textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.codex-bot-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 360px;
+  overflow: auto;
+  margin-bottom: 16px;
+  padding-right: 4px;
+}
+
+.codex-bot-message {
+  padding: 14px 16px;
+  border-radius: 20px;
+  border: var(--border-card);
+  background: #fff;
+}
+
+.codex-bot-message--user {
+  background: var(--surface-blue, #eaf0ff);
+}
+
+.codex-bot-message-body {
+  white-space: pre-wrap;
+  color: var(--text-primary);
+}
+
+.codex-bot-citations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.codex-bot-citation {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--bg-surface-muted);
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+}
+
+.codex-bot-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.codex-bot-status,
+.codex-bot-empty {
+  margin-top: 12px;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.codex-bot-status.is-error {
+  color: #9d3d3d;
 }
 
 .audio-reader-launch {
@@ -944,21 +1089,31 @@ body.has-audio-reader {
   .reflection-prompt,
   .reflection-textarea,
   .reflection-saved,
-  .autosave-indicator,
-  .start-timer-btn,
-  .timer-start-btn {
+  .autosave-indicator {
     margin-left: 18px;
     margin-right: 18px;
   }
 
-  .timer-widget {
-    right: 14px;
-    bottom: 14px;
-    width: min(296px, calc(100vw - 28px));
+  body.has-audio-reader,
+  body.has-audio-reader-codex {
+    padding-bottom: 96px;
   }
 
-  body.has-audio-reader {
-    padding-bottom: 96px;
+  .codex-bot-shell {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .codex-bot-fab {
+    min-width: 72px;
+    height: 72px;
+    padding: 0 18px;
+  }
+
+  .codex-bot-panel {
+    width: min(calc(100vw - 20px), 420px);
+    max-height: min(76vh, 720px);
+    bottom: 88px;
   }
 
   .audio-reader-launch {
