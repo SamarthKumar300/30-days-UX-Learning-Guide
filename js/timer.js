@@ -13,10 +13,10 @@ const BLOCK_DURATIONS = {
 };
 
 const BLOCK_LABELS = {
-  study:      'Study Session',
-  practice:   'Practice Session',
+  study:      'Guidebook Breakdown',
+  practice:   'Challenges, Drills & Systems',
   assignment: 'Assignment',
-  reflection: 'Reflection',
+  reflection: 'Interview Readiness',
 };
 
 const Timer = {

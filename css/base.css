@@ -231,6 +231,10 @@ video {
   font-size: clamp(1.45rem, 2vw, 1.9rem);
 }
 
+.study-tab-section h3 {
+  font-size: clamp(1.4rem, 1.9vw, 1.75rem);
+}
+
 .study-content h4,
 .study-content-wrapper h4 {
   margin: var(--space-5) 0 var(--space-2);
@@ -242,6 +246,7 @@ video {
 
 .study-content p,
 .study-content-wrapper p,
+.study-tab-section p,
 .practice-content p,
 .assignment-content p {
   font-size: 1rem;
@@ -252,6 +257,8 @@ video {
 .study-content ol,
 .study-content-wrapper ul,
 .study-content-wrapper ol,
+.study-tab-section ul,
+.study-tab-section ol,
 .practice-content ul,
 .practice-content ol,
 .assignment-content ul,

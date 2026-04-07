@@ -539,6 +539,10 @@
 }
 
 @media (max-width: 640px) {
+  :root {
+    --header-height: 68px;
+  }
+
   .site-header {
     height: 68px;
   }
@@ -617,6 +621,10 @@
 
   .footer-inner {
     padding: 24px;
+  }
+
+  .section {
+    padding: var(--space-8) 0;
   }
 }
 

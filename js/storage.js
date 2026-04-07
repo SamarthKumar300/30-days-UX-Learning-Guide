@@ -3,7 +3,9 @@
  * Single source of truth for all persisted data
  */
 
-const STORAGE_KEY = 'ux-mastery-v1';
+import { TOTAL_DAYS, TOTAL_WEEKS, WEEK_DEFINITIONS } from './course-config.js';
+
+const STORAGE_KEY = 'ux-mastery-v2';
 
 function getLocalISODate(offsetDays = 0) {
   const now = new Date();
@@ -16,24 +18,17 @@ function getLocalISODate(offsetDays = 0) {
 
 const DEFAULT_STATE = {
   days: Object.fromEntries(
-    Array.from({ length: 30 }, (_, i) => [
+    Array.from({ length: TOTAL_DAYS }, (_, i) => [
       `day-${i + 1}`,
       { completed: false, blocks: { study: false, practice: false, assignment: false, reflection: false } }
     ])
   ),
   reflections: Object.fromEntries(
-    Array.from({ length: 30 }, (_, i) => [`day-${i + 1}`, ''])
+    Array.from({ length: TOTAL_DAYS }, (_, i) => [`day-${i + 1}`, ''])
   ),
-  assignments: {
-    // Short (10)
-    'short-1': false, 'short-2': false, 'short-3': false, 'short-4': false, 'short-5': false,
-    'short-6': false, 'short-7': false, 'short-8': false, 'short-9': false, 'short-10': false,
-    // Medium (10)
-    'medium-1': false, 'medium-2': false, 'medium-3': false, 'medium-4': false, 'medium-5': false,
-    'medium-6': false, 'medium-7': false, 'medium-8': false, 'medium-9': false, 'medium-10': false,
-    // High (6)
-    'high-1': false, 'high-2': false, 'high-3': false, 'high-4': false, 'high-5': false, 'high-6': false,
-  },
+  assignments: Object.fromEntries(
+    Array.from({ length: TOTAL_DAYS }, (_, i) => [`assignment-day-${i + 1}`, false])
+  ),
   skills: {
     emotionReading: 1,
     rootCauseThinking: 1,
@@ -164,9 +159,9 @@ const Storage = {
   },
 
   getWeekProgress(week) {
-    // week: 1-4
-    const ranges = { 1: [1,7], 2: [8,14], 3: [15,21], 4: [22,30] };
-    const [start, end] = ranges[week];
+    const definition = WEEK_DEFINITIONS.find(item => item.number === week);
+    if (!definition) return { completed: 0, total: 0 };
+    const [start, end] = [definition.startDay, definition.endDay];
     let completed = 0;
     for (let d = start; d <= end; d++) {
       if (this.get(`days.day-${d}.completed`)) completed++;
@@ -178,10 +173,10 @@ const Storage = {
     if (!this._state) this.load();
     if (!this.hasStarted()) return 0;
     // Find the first incomplete day
-    for (let d = 1; d <= 30; d++) {
+    for (let d = 1; d <= TOTAL_DAYS; d++) {
       if (!this.get(`days.day-${d}.completed`)) return d;
     }
-    return 30;
+    return TOTAL_DAYS;
   },
 
   hasStarted() {

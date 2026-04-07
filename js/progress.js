@@ -4,6 +4,7 @@
 
 import Storage from './storage.js';
 import Navigation from './navigation.js';
+import { TOTAL_DAYS, WEEK_DEFINITIONS } from './course-config.js';
 
 const Progress = {
   init() {
@@ -25,9 +26,11 @@ const Progress = {
       // Load saved state
       const state = Storage.getDayState(dayNum);
       checkbox.checked = state.blocks[block] || false;
+      this._syncCheckboxWrapper(checkbox);
 
       checkbox.addEventListener('change', () => {
         Storage.setBlockCompleted(dayNum, block, checkbox.checked);
+        this._syncCheckboxWrapper(checkbox);
         this._autoCompleteDayIfAllDone(dayNum);
         this._updateDayProgressBar(dayNum);
         this._updateWeekProgressDots();
@@ -47,10 +50,12 @@ const Progress = {
       // Load saved state
       const state = Storage.getDayState(dayNum);
       checkbox.checked = state.completed || false;
+      this._syncCheckboxWrapper(checkbox);
       this._applyDayCompletedStyle(dayNum, state.completed);
 
       checkbox.addEventListener('change', () => {
         Storage.setDayCompleted(dayNum, checkbox.checked);
+        this._syncCheckboxWrapper(checkbox);
         this._applyDayCompletedStyle(dayNum, checkbox.checked);
         this._updateWeekProgressDots();
         this._updateAllProgressBars();
@@ -67,9 +72,11 @@ const Progress = {
       const id = checkbox.dataset.assignmentId;
 
       checkbox.checked = Storage.getAssignment(id);
+      this._syncCheckboxWrapper(checkbox);
 
       checkbox.addEventListener('change', () => {
         Storage.setAssignment(id, checkbox.checked);
+        this._syncCheckboxWrapper(checkbox);
         // Toggle card completed style
         const card = checkbox.closest('.assignment-card, .inline-assignment');
         if (card) card.classList.toggle('completed', checkbox.checked);
@@ -83,6 +90,11 @@ const Progress = {
     });
   },
 
+  _syncCheckboxWrapper(checkbox) {
+    const label = checkbox.closest('.checkbox-wrapper, .assignment-check-label, .block-check-label, .day-check-label');
+    if (label) label.classList.toggle('checked', checkbox.checked);
+  },
+
   // ── Auto-complete day when all 4 blocks checked ──
 
   _autoCompleteDayIfAllDone(dayNum) {
@@ -94,6 +106,7 @@ const Progress = {
       const dayCheckbox = document.querySelector(`[data-day-check="${dayNum}"]`);
       if (dayCheckbox) {
         dayCheckbox.checked = true;
+        this._syncCheckboxWrapper(dayCheckbox);
         this._applyDayCompletedStyle(dayNum, true);
       }
     }
@@ -146,9 +159,9 @@ const Progress = {
     const assignmentsCompleted = Storage.getTotalAssignmentsCompleted();
     const reflectionsWritten = Storage.getTotalReflectionsWritten();
 
-    this._setBar('progress-bar-days', daysCompleted, 30);
-    this._setBar('progress-bar-assignments', assignmentsCompleted, 26);
-    this._setBar('progress-bar-reflections', reflectionsWritten, 30);
+    this._setBar('progress-bar-days', daysCompleted, TOTAL_DAYS);
+    this._setBar('progress-bar-assignments', assignmentsCompleted, TOTAL_DAYS);
+    this._setBar('progress-bar-reflections', reflectionsWritten, TOTAL_DAYS);
 
     // Stat counters
     this._setCounter('stat-days', daysCompleted);
@@ -156,14 +169,14 @@ const Progress = {
     this._setCounter('stat-reflections', reflectionsWritten);
 
     // Week progress bars (week cards on dashboard)
-    for (let w = 1; w <= 4; w++) {
-      const { completed, total } = Storage.getWeekProgress(w);
-      this._setBar(`week-progress-${w}`, completed, total);
-      this._setCounter(`week-count-${w}`, completed);
-    }
+    WEEK_DEFINITIONS.forEach(week => {
+      const { completed, total } = Storage.getWeekProgress(week.number);
+      this._setBar(`week-progress-${week.number}`, completed, total);
+      this._setCounter(`week-count-${week.number}`, completed);
+    });
 
     // Update all day progress bars on week pages
-    for (let d = 1; d <= 30; d++) {
+    for (let d = 1; d <= TOTAL_DAYS; d++) {
       this._updateDayProgressBar(d);
     }
   },

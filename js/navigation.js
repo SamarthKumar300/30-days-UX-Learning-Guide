@@ -3,6 +3,7 @@
  */
 
 import Storage from './storage.js';
+import { TOTAL_DAYS, WEEK_DEFINITIONS } from './course-config.js';
 
 const Navigation = {
   _mobileOpen: false,
@@ -95,7 +96,7 @@ const Navigation = {
     document.body.style.overflow = '';
   },
 
-  /** Update "Day X of 30" pill in header */
+  /** Update "Day X of 56" pill in header */
   _updateProgressPill() {
     const pill = document.getElementById('progress-pill');
     if (!pill) return;
@@ -109,11 +110,12 @@ const Navigation = {
     const currentDay = Storage.getCurrentDay();
     const totalCompleted = Storage.getTotalDaysCompleted();
 
-    pill.textContent = `Day ${currentDay} of 30`;
+    pill.textContent = `Day ${currentDay} of ${TOTAL_DAYS}`;
     pill.title = `${totalCompleted} days completed`;
 
     // Update week dots
-    for (let w = 1; w <= 4; w++) {
+    for (const week of WEEK_DEFINITIONS) {
+      const w = week.number;
       const dot = document.getElementById(`week-dot-${w}`);
       if (!dot) continue;
       const { completed, total } = Storage.getWeekProgress(w);

@@ -43,7 +43,8 @@
 }
 
 .study-content-wrapper h3,
-.study-content h3 {
+.study-content h3,
+.study-tab-section > h3 {
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(23,23,23,0.08);
 }
@@ -145,9 +146,10 @@
 
   .accordion-item.open .accordion-body {
     display: grid;
-    grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.9fr);
+    grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.92fr);
     align-items: start;
-    column-gap: 20px;
+    column-gap: 24px;
+    row-gap: 0;
     overflow: visible;
   }
 
@@ -169,7 +171,7 @@
     top: calc(var(--header-height) + 20px);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
   }
 
   .accordion-item.open .accordion-sidebar > * {
@@ -188,5 +190,9 @@
   .scale-cards,
   .emotion-grid {
     grid-template-columns: 1fr;
+  }
+
+  .week-main {
+    padding-bottom: 120px;
   }
 }

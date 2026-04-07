@@ -3,7 +3,11 @@
     "allow": [
       "Bash(ls \"e:/claude testing projects/1 month UX plan/plan/\"*.html)",
       "Bash(ls \"e:/claude testing projects/1 month UX plan/plan/js/\"*.js)",
-      "Bash(ls \"e:/claude testing projects/1 month UX plan/plan/css/\"*.css)"
+      "Bash(ls \"e:/claude testing projects/1 month UX plan/plan/css/\"*.css)",
+      "mcp__plugin_context-mode_context-mode__ctx_batch_execute",
+      "mcp__plugin_context-mode_context-mode__ctx_execute_file",
+      "mcp__plugin_context-mode_context-mode__ctx_search",
+      "mcp__plugin_context-mode_context-mode__ctx_execute"
     ]
   }
 }

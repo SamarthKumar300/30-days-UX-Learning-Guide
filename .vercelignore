@@ -1,0 +1,8 @@
+.git
+.gitignore
+.claude
+.tmp-pdf-text
+Complete Interview Kit - Product-UX Design
+_fix-encoding.js
+_fix-encoding.ps1
+node_modules

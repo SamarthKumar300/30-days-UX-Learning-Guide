@@ -90,27 +90,25 @@ const AssignmentsFilter = {
 
   _updateSummary() {
     const all   = document.querySelectorAll('.assignment-card');
-    let total = 0, short = 0, medium = 0, high = 0;
+    let completed = 0;
+    const completedByWeek = {};
 
     all.forEach(card => {
       const checkbox = card.querySelector('[data-assignment-id]');
       if (!checkbox) return;
       const done = Storage.getAssignment(checkbox.dataset.assignmentId);
-      total++;
-      const diff = card.dataset.difficulty;
       if (done) {
-        if (diff === 'short')  short++;
-        else if (diff === 'medium') medium++;
-        else if (diff === 'high')   high++;
+        completed++;
+        const week = card.dataset.week || '0';
+        completedByWeek[week] = (completedByWeek[week] || 0) + 1;
       }
     });
 
-    const completed = short + medium + high;
     const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
     setEl('stat-assign-completed', completed);
-    setEl('stat-short-completed',  short);
-    setEl('stat-medium-completed', medium);
-    setEl('stat-high-completed',   high);
+    setEl('stat-short-completed', Object.keys(completedByWeek).length);
+    setEl('stat-medium-completed', document.querySelectorAll('.assignment-card').length);
+    setEl('stat-high-completed', Object.values(completedByWeek).reduce((max, value) => Math.max(max, value), 0));
   },
 
   _bindResetButton() {
