@@ -299,16 +299,23 @@
 }
 
 .block-label {
+  flex: 1 1 auto;
+  min-width: 0;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: var(--font-semibold);
   color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block-icon {
-  width: 36px;
-  height: 36px;
+  flex-shrink: 0;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0 12px;
   border-radius: 14px;
   display: inline-flex;
   align-items: center;
@@ -316,6 +323,8 @@
   background: #fff;
   border: var(--border-card);
   box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+  line-height: 1;
 }
 
 .block-content,
@@ -1050,6 +1059,17 @@ body.has-audio-reader-codex {
 }
 
 @media (max-width: 768px) {
+  .block-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .block-label {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
   .accordion-header {
     padding: 22px 20px;
     align-items: flex-start;
