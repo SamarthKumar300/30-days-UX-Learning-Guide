@@ -1078,8 +1078,8 @@ function renderAiWorkflowPage(markdown) {
   const headings = getAiWorkflowHeadings(markdown);
   const contentHtml = addHeadingAnchors(markdownToHtml(getAiWorkflowBodyMarkdown(markdown)));
   const introHtml = markdownToHtml(getAiWorkflowIntro(markdown));
-  const moduleLinks = headings.slice(0, 19).map(heading => `
-    <a href="#${heading.id}" class="ai-workflow-toc-link">${heading.title}</a>
+  const moduleLinks = headings.slice(0, 19).map((heading, index) => `
+    <a href="#${heading.id}" class="ai-workflow-toc-link${index === 0 ? ' active' : ''}"${index === 0 ? ' aria-current="true"' : ''}>${heading.title}</a>
   `).join('');
   const referenceLinks = headings.slice(19).map(heading => `
     <a href="#${heading.id}" class="ai-workflow-toc-link ai-workflow-toc-link--secondary">${heading.title}</a>

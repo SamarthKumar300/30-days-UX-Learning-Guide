@@ -35,6 +35,10 @@ async function init() {
     initTimelineNavigation();
     initContinueButton();
   }
+
+  if (page === 'ai-workflow.html') {
+    initAiWorkflowScrollSpy();
+  }
 }
 
 function initTimelineNavigation() {
@@ -83,6 +87,53 @@ function initContinueButton() {
 
   btn.textContent = currentDay <= 1 ? 'Begin Day 1 ->' : `Continue - Day ${currentDay} ->`;
   btn.href = `${weekPage}#day-${currentDay}`;
+}
+
+function initAiWorkflowScrollSpy() {
+  const tocLinks = Array.from(document.querySelectorAll('.ai-workflow-toc-link'));
+  if (!tocLinks.length) return;
+
+  const sectionEntries = tocLinks
+    .map(link => {
+      const sectionId = link.getAttribute('href')?.slice(1);
+      const section = sectionId ? document.getElementById(sectionId) : null;
+      return section ? { link, section } : null;
+    })
+    .filter(Boolean);
+
+  if (!sectionEntries.length) return;
+
+  const setActive = activeId => {
+    sectionEntries.forEach(({ link, section }) => {
+      const isActive = section.id === activeId;
+      link.classList.toggle('active', isActive);
+      if (isActive) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  const updateActiveSection = () => {
+    const offset = 150;
+    let activeSection = sectionEntries[0].section;
+
+    sectionEntries.forEach(({ section }) => {
+      if (section.getBoundingClientRect().top - offset <= 0) {
+        activeSection = section;
+      }
+    });
+
+    setActive(activeSection.id);
+  };
+
+  updateActiveSection();
+  window.addEventListener('scroll', updateActiveSection, { passive: true });
+
+  tocLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const targetId = link.getAttribute('href')?.slice(1);
+      if (targetId) setActive(targetId);
+    });
+  });
 }
 
 init();
