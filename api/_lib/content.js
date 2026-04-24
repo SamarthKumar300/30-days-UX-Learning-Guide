@@ -4,7 +4,7 @@ const path = require('path');
 let cachedCorpus = null;
 
 function readFile(name) {
-  return fs.readFileSync(path.join(process.cwd(), name), 'utf8');
+  return fs.readFileSync(path.join(process.cwd(), 'content', name), 'utf8');
 }
 
 function normalize(text) {

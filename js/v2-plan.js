@@ -1,8 +1,8 @@
 import { PLAN_MARKDOWN_PATH, WEEK_DEFINITIONS } from './course-config.js';
 import { READINESS_CONTENT } from './study-enhancements.js';
 
-const DAY_WISE_CONTENT_PATH = 'Day-wise-content.md';
-const PDF_COVERAGE_AUDIT_PATH = 'PDF-coverage-audit.md';
+const DAY_WISE_CONTENT_PATH = 'content/Day-wise-content.md';
+const PDF_COVERAGE_AUDIT_PATH = 'content/PDF-coverage-audit.md';
 
 let planPromise;
 

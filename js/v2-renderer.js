@@ -1,6 +1,9 @@
 import { getWeekByNumber, getWeekForDay, TOTAL_DAYS, TOTAL_WEEKS, WEEK_DEFINITIONS } from './course-config.js';
 import { loadPlan, markdownToHtml } from './v2-plan.js';
 
+const AI_WORKFLOW_MARKDOWN_PATH = 'learning-guide-AI-workflow.md';
+let aiWorkflowGuidePromise;
+
 function createWeekNavLinks(activePage) {
   return WEEK_DEFINITIONS.map(week => `
     <a href="${week.slug}" class="nav-link${activePage === week.slug ? ' active' : ''}">${week.navTitle}</a>
@@ -14,6 +17,7 @@ function createMobileLinks(activePage) {
     <a href="assignments.html" class="nav-link${activePage === 'assignments.html' ? ' active' : ''}">Assignment Bank</a>
     <a href="references.html" class="nav-link${activePage === 'references.html' ? ' active' : ''}">Guide Notes</a>
     <a href="human-specific-topics.html" class="nav-link${activePage === 'human-specific-topics.html' ? ' active' : ''}">Human Edge</a>
+    <a href="ai-workflow.html" class="nav-link${activePage === 'ai-workflow.html' ? ' active' : ''}">AI Workflow</a>
   `;
 }
 
@@ -27,6 +31,7 @@ function createHeader(activePage) {
           <a href="assignments.html" class="nav-link${activePage === 'assignments.html' ? ' active' : ''}">Assignments</a>
           <a href="references.html" class="nav-link${activePage === 'references.html' ? ' active' : ''}">Guide Notes</a>
           <a href="human-specific-topics.html" class="nav-link${activePage === 'human-specific-topics.html' ? ' active' : ''}">Human Edge</a>
+          <a href="ai-workflow.html" class="nav-link${activePage === 'ai-workflow.html' ? ' active' : ''}">AI Workflow</a>
         </nav>
         <div class="header-right">
           <span class="progress-pill" id="progress-pill">Day 1 of 56</span>
@@ -61,11 +66,78 @@ function createFooter() {
             <a href="assignments.html">Assignments</a>
             <a href="references.html">Guide Notes</a>
             <a href="human-specific-topics.html">Human Edge</a>
+            <a href="ai-workflow.html">AI Workflow</a>
           </nav>
         </div>
       </div>
     </footer>
   `;
+}
+
+function slugifyHeading(value) {
+  return value
+    .toLowerCase()
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+function addHeadingAnchors(html) {
+  const seen = new Map();
+  return html.replace(/<h([2-6])>(.*?)<\/h\1>/g, (match, level, content) => {
+    const baseSlug = slugifyHeading(content) || `section-${seen.size + 1}`;
+    const count = seen.get(baseSlug) || 0;
+    seen.set(baseSlug, count + 1);
+    const slug = count ? `${baseSlug}-${count + 1}` : baseSlug;
+    return `<h${level} id="${slug}">${content}</h${level}>`;
+  });
+}
+
+function getAiWorkflowHeadings(markdown) {
+  return markdown
+    .split('\n')
+    .map(line => line.match(/^#\s+(.+)$/))
+    .filter(Boolean)
+    .map(match => match[1].trim())
+    .filter(title => !title.startsWith('Learning Guide:'))
+    .map(title => ({ title, id: slugifyHeading(title) }));
+}
+
+function getAiWorkflowIntro(markdown) {
+  const introEnd = markdown.indexOf('\n# Module 1:');
+  const intro = introEnd > -1 ? markdown.slice(0, introEnd) : markdown;
+  return intro
+    .replace(/^#\s+.+\n/, '')
+    .split('\n')
+    .filter(line => line.trim() && !line.trim().startsWith('---'))
+    .slice(0, 7)
+    .join('\n');
+}
+
+function getAiWorkflowBodyMarkdown(markdown) {
+  return markdown
+    .replace(/^#\s+Learning Guide:\s+AI-Powered Design Workflow\s*\n/i, '')
+    .replace(/^---\s*$/gm, '');
+}
+
+function summarizeAiWorkflow(markdown) {
+  return {
+    modules: (markdown.match(/^# Module \d+:/gm) || []).length,
+    workflowSteps: (markdown.match(/^## Step \d+:/gm) || []).length,
+    prompts: (markdown.match(/^## .+ Prompt$/gm) || []).length,
+    checklists: (markdown.match(/^## .+ Readiness$/gm) || []).length,
+  };
+}
+
+async function loadAiWorkflowGuide() {
+  if (!aiWorkflowGuidePromise) {
+    aiWorkflowGuidePromise = fetch(AI_WORKFLOW_MARKDOWN_PATH).then(response => {
+      if (!response.ok) throw new Error(`Failed to load ${AI_WORKFLOW_MARKDOWN_PATH}`);
+      return response.text();
+    });
+  }
+  return aiWorkflowGuidePromise;
 }
 
 function renderWeekProgressDots(week) {
@@ -1001,12 +1073,77 @@ function renderHumanTopics() {
   `;
 }
 
+function renderAiWorkflowPage(markdown) {
+  const stats = summarizeAiWorkflow(markdown);
+  const headings = getAiWorkflowHeadings(markdown);
+  const contentHtml = addHeadingAnchors(markdownToHtml(getAiWorkflowBodyMarkdown(markdown)));
+  const introHtml = markdownToHtml(getAiWorkflowIntro(markdown));
+  const moduleLinks = headings.slice(0, 19).map(heading => `
+    <a href="#${heading.id}" class="ai-workflow-toc-link">${heading.title}</a>
+  `).join('');
+  const referenceLinks = headings.slice(19).map(heading => `
+    <a href="#${heading.id}" class="ai-workflow-toc-link ai-workflow-toc-link--secondary">${heading.title}</a>
+  `).join('');
+
+  return `
+    ${createHeader('ai-workflow.html')}
+    <main class="ai-workflow-main">
+      <section class="page-hero ai-workflow-hero">
+        <div class="container">
+          <div class="page-hero-eyebrow">AI Workflow Guide</div>
+          <h1 class="page-hero-title">AI-Powered <span class="text-gradient">Design Workflow</span></h1>
+          <p class="page-hero-subtitle">A practical guide for moving from random AI screen generation to reusable product design systems, coded prototypes, skills, GitHub workflows, hosting, and documentation.</p>
+          <div class="hero-stats-row ai-workflow-stats">
+            <div class="hero-stat"><span class="hero-stat-val">${stats.modules}</span><span class="hero-stat-label">modules</span></div>
+            <div class="hero-stat"><span class="hero-stat-val">${stats.workflowSteps}</span><span class="hero-stat-label">repeatable steps</span></div>
+            <div class="hero-stat"><span class="hero-stat-val">${stats.prompts}</span><span class="hero-stat-label">prompt templates</span></div>
+            <div class="hero-stat"><span class="hero-stat-val">${stats.checklists}</span><span class="hero-stat-label">readiness areas</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section ai-workflow-intro-section">
+        <div class="container">
+          <div class="ai-workflow-intro-grid">
+            <article class="ai-workflow-principle">
+              <span class="ai-workflow-principle-kicker">Core principle</span>
+              <p>Do not use AI to randomly generate UI. Build a clean design system first, then make AI work inside that system.</p>
+            </article>
+            <article class="ai-workflow-intro-card markdown-content">
+              ${introHtml}
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="container ai-workflow-layout">
+        <aside class="ai-workflow-sidebar" aria-label="AI workflow contents">
+          <div class="ai-workflow-sidebar-sticky">
+            <h2 class="ai-workflow-sidebar-title">Modules</h2>
+            <nav class="ai-workflow-toc">${moduleLinks}</nav>
+            <div class="ref-sidebar-divider"></div>
+            <h2 class="ai-workflow-sidebar-title">Reference</h2>
+            <nav class="ai-workflow-toc">${referenceLinks}</nav>
+          </div>
+        </aside>
+        <article class="ai-workflow-content markdown-content">
+          ${contentHtml}
+        </article>
+      </section>
+    </main>
+    ${renderCodexBotShell()}
+    ${createFooter()}
+  `;
+}
+
 export async function renderPage(page, root) {
+  page = (page || 'index.html').toLowerCase();
   const plan = await loadPlan();
   if (page === 'index.html' || page === '') root.innerHTML = renderDashboard(plan);
   else if (page === 'assignments.html') root.innerHTML = renderAssignments(plan);
   else if (page === 'references.html') root.innerHTML = renderReferences(plan);
   else if (page === 'human-specific-topics.html') root.innerHTML = renderHumanTopics();
+  else if (page === 'ai-workflow.html') root.innerHTML = renderAiWorkflowPage(await loadAiWorkflowGuide());
   else {
     const weekMatch = page.match(/^week(\d)\.html$/);
     if (weekMatch) root.innerHTML = renderWeekPage(plan, Number(weekMatch[1]));

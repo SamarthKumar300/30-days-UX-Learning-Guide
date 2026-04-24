@@ -54,9 +54,9 @@ Locked decisions:
 ### 3. Ground Bot Answers In Website Content
 
 - Build a backend retrieval index from:
-  - `Day-wise-content.md`
-  - `V2-guidebook-plan.md`
-  - `PDF-coverage-audit.md`
+  - `content/Day-wise-content.md`
+  - `content/V2-guidebook-plan.md`
+  - `content/PDF-coverage-audit.md`
 - Chunk content by meaningful curriculum boundaries:
   - week/day
   - tab section

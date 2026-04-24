@@ -1,6 +1,6 @@
 export const TOTAL_DAYS = 56;
 export const TOTAL_WEEKS = 8;
-export const PLAN_MARKDOWN_PATH = 'V2-guidebook-plan.md';
+export const PLAN_MARKDOWN_PATH = 'content/V2-guidebook-plan.md';
 
 export const WEEK_DEFINITIONS = [
   { number: 1, startDay: 1, endDay: 7, slug: 'week1.html', shortTitle: 'Human-First Foundation', navTitle: 'Week 1: Human-First Foundation', accentVar: '--week1-color' },

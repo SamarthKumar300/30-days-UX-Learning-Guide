@@ -3,9 +3,19 @@
   "cleanUrls": false,
   "functions": {
     "api/chat/index.js": {
-      "includeFiles": "{Day-wise-content.md,V2-guidebook-plan.md,PDF-coverage-audit.md}"
+      "includeFiles": "content/{Day-wise-content.md,V2-guidebook-plan.md,PDF-coverage-audit.md}"
     }
   },
+  "rewrites": [
+    {
+      "source": "/AI-workflow.html",
+      "destination": "/ai-workflow.html"
+    },
+    {
+      "source": "/AI-workflow",
+      "destination": "/ai-workflow.html"
+    }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",

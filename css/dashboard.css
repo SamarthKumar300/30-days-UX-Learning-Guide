@@ -64,6 +64,10 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.timeline-stats {
+  margin-top: 20px;
+}
+
 .week-cards-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }

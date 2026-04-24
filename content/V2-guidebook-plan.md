@@ -3,7 +3,7 @@
 > **Target:** Junior Product Designer (1 year experience) -> 25 LPA+ product-based companies
 > **Duration:** 8 weeks / 56 days
 > **Primary delivery surface:** The website itself
-> **Content inputs:** Existing live website content + complete PDF material + `Day-wise-content.md` conversion style
+> **Content inputs:** Existing live website content + complete PDF material + `content/Day-wise-content.md` conversion style
 > **Core rule:** The learner should study from the website, not from the PDFs
 
 ---
@@ -22,7 +22,7 @@ That material must combine:
 
 - the strongest insights already live on the website
 - the full set of meaningful ideas from all five PDFs
-- the clearer, web-native teaching style already demonstrated in `Day-wise-content.md`
+- the clearer, web-native teaching style already demonstrated in `content/Day-wise-content.md`
 
 If the same topic appears in both the live website and the PDFs, it must be merged into one stronger teaching flow.
 
@@ -75,7 +75,7 @@ When building or revising day content, use this source hierarchy:
    - Existing `study-enhancements` content
    - Existing assignment and readiness-layer content where still valuable
 
-2. **`Day-wise-content.md`**
+2. **`content/Day-wise-content.md`**
    - This is the benchmark for converting PDF material into web-native teaching content
    - It shows the right tone: explanatory, structured, readable, interview-relevant
 
@@ -163,7 +163,7 @@ Each day page must contain:
 
 ### Study block standard
 
-The main study block should generally be written in the same style demonstrated by `Day-wise-content.md`:
+The main study block should generally be written in the same style demonstrated by `content/Day-wise-content.md`:
 
 - teaching-first prose
 - explicit conceptual explanation
@@ -401,7 +401,7 @@ The rewrite must audit and preserve all high-value live website insights, especi
 
 If these ideas already exist in stronger form on the site, they should remain part of the final curriculum.
 
-### `Day-wise-content.md`
+### `content/Day-wise-content.md`
 
 This file is currently the clearest proof of the desired conversion style.
 
@@ -522,9 +522,9 @@ The curriculum is not only prose. The following systems remain part of the final
 
 ### Already visible in the repo
 
-- `Day-wise-content.md` contains converted, web-native teaching content for Days 1-21
+- `content/Day-wise-content.md` contains converted, web-native teaching content for Days 1-21
 - existing live website and `study-enhancements` content already contain valuable insights that must be preserved
-- the current `V2-guidebook-plan.md` structure already defines the 56-day spine and daily titles
+- the current `content/V2-guidebook-plan.md` structure already defines the 56-day spine and daily titles
 
 ### Still required
 
@@ -583,7 +583,7 @@ The rewrite and all future implementation work should satisfy all of the followi
 
 ### Source integration
 
-- [ ] `Day-wise-content.md` is used as the quality benchmark for conversion style
+- [ ] `content/Day-wise-content.md` is used as the quality benchmark for conversion style
 - [ ] Existing website content remains a mandatory source input
 - [ ] PDFs are treated as source assets, not study instructions
 

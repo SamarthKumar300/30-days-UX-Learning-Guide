@@ -6,7 +6,7 @@ import AssignmentsFilter from './assignments-filter.js';
 import CodexBot from './codex-bot.js';
 import { renderPage } from './v2-renderer.js';
 
-const page = window.location.pathname.split('/').pop() || 'index.html';
+const page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
 
 function isWeekPage() {
   return /^week[1-8]\.html$/.test(page);

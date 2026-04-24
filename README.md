@@ -108,35 +108,53 @@ The app supports a delayed start state, where Day 1 can begin from the next day 
 
 ```text
 plan/
-├── index.html
-├── week1.html
-├── week2.html
-├── week3.html
-├── week4.html
-├── assignments.html
-├── references.html
-├── README.md
-├── css/
-│   ├── variables.css
-│   ├── base.css
-│   ├── layout.css
-│   ├── components.css
-│   ├── dashboard.css
-│   ├── week.css
-│   ├── assignments.css
-│   └── references.css
-├── js/
-│   ├── main.js
-│   ├── navigation.js
-│   ├── accordion.js
-│   ├── progress.js
-│   ├── reflections.js
-│   ├── timer.js
-│   ├── storage.js
-│   ├── radar-chart.js
-│   └── assignments-filter.js
-└── assets/
-    └── image.png
++-- index.html
++-- week1.html
++-- week2.html
++-- week3.html
++-- week4.html
++-- week5.html
++-- week6.html
++-- week7.html
++-- week8.html
++-- assignments.html
++-- references.html
++-- human-specific-topics.html
++-- README.md
++-- content/
+�   +-- Day-wise-content.md
+�   +-- V2-guidebook-plan.md
+�   +-- PDF-coverage-audit.md
++-- docs/
+�   +-- 30-days-UX-guidebook.md
+�   +-- UX-mastery-plan.md
+�   +-- Codex Bot.md
++-- css/
+�   +-- variables.css
+�   +-- base.css
+�   +-- layout.css
+�   +-- components.css
+�   +-- dashboard.css
+�   +-- week.css
+�   +-- assignments.css
+�   +-- references.css
++-- js/
+�   +-- main.js
+�   +-- navigation.js
+�   +-- accordion.js
+�   +-- progress.js
+�   +-- reflections.js
+�   +-- timer.js
+�   +-- storage.js
+�   +-- radar-chart.js
+�   +-- assignments-filter.js
+�   +-- study-enhancements-data/
++-- scripts/
+�   +-- _render-check.js
+�   +-- _fix-encoding.js
+�   +-- _fix-encoding.ps1
++-- assets/
+    +-- image.png
 ```
 
 ## Tech Stack
@@ -214,6 +232,13 @@ Then open:
 http://localhost:8000
 ```
 
+## Content and Scripts
+
+- Runtime curriculum files live in `content/`.
+- Planning and reference documents live in `docs/`.
+- Maintenance utilities live in `scripts/`.
+- Public website entry pages stay at the repo root so deployed routes do not change.
+
 ## Git Setup
 
 To initialize and push this project to GitHub:
@@ -248,3 +273,6 @@ git push -u origin main
 ## License
 
 This project is currently for personal or internal use unless a separate license is added.
+
+
+

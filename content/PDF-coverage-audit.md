@@ -3,14 +3,14 @@
 Date: 2026-04-07
 
 Scope:
-- `Complete Interview Kit - Product-UX Design/Part 1 - Understand Product Design from Basics to Advanced.pdf`
-- `Complete Interview Kit - Product-UX Design/Part 2 - Interview Round Playbook.pdf`
-- `Complete Interview Kit - Product-UX Design/Part 3 - Interview Simulation & Real-World Practice.pdf`
-- `Complete Interview Kit - Product-UX Design/Part 4 -  Interview Readiness Lab (Practice + Resources).pdf`
-- `Complete Interview Kit - Product-UX Design/Part 5 - Design in the Age of AI.pdf`
+- `docs/source-pdfs/Complete Interview Kit - Product-UX Design/Part 1 - Understand Product Design from Basics to Advanced.pdf`
+- `docs/source-pdfs/Complete Interview Kit - Product-UX Design/Part 2 - Interview Round Playbook.pdf`
+- `docs/source-pdfs/Complete Interview Kit - Product-UX Design/Part 3 - Interview Simulation & Real-World Practice.pdf`
+- `docs/source-pdfs/Complete Interview Kit - Product-UX Design/Part 4 -  Interview Readiness Lab (Practice + Resources).pdf`
+- `docs/source-pdfs/Complete Interview Kit - Product-UX Design/Part 5 - Design in the Age of AI.pdf`
 
 Website study surface audited against:
-- `Day-wise-content.md`
+- `content/Day-wise-content.md`
 - `js/v2-plan.js`
 - `js/v2-renderer.js`
 
@@ -39,7 +39,7 @@ This means compression is acceptable only when the shorter version still carries
 
 Current website content status:
 
-- Days 1-56 now have on-site study-guide content available through `Day-wise-content.md`
+- Days 1-56 now have on-site study-guide content available through `content/Day-wise-content.md`
 - The learner-facing flow no longer depends on opening PDFs to study the curriculum
 - The later-week days are no longer migration stubs
 
@@ -354,7 +354,7 @@ Checks completed:
 - render check passes
 
 Verification notes:
-- `node _render-check.js` passes
+- `node scripts/_render-check.js` passes
 - parser check confirms no days are missing study content
 
 ## Recommendation Before Final Website Push

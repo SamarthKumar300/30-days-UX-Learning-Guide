@@ -1,14 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 const { pathToFileURL } = require('url');
-const markdown = fs.readFileSync(path.join(process.cwd(), 'V2-guidebook-plan.md'), 'utf8');
-const dayWise = fs.readFileSync(path.join(process.cwd(), 'Day-wise-content.md'), 'utf8');
-const audit = fs.readFileSync(path.join(process.cwd(), 'PDF-coverage-audit.md'), 'utf8');
+const markdown = fs.readFileSync(path.join(process.cwd(), 'content', 'V2-guidebook-plan.md'), 'utf8');
+const dayWise = fs.readFileSync(path.join(process.cwd(), 'content', 'Day-wise-content.md'), 'utf8');
+const audit = fs.readFileSync(path.join(process.cwd(), 'content', 'PDF-coverage-audit.md'), 'utf8');
+const aiWorkflow = fs.readFileSync(path.join(process.cwd(), 'learning-guide-AI-workflow.md'), 'utf8');
 
 global.fetch = async (requestPath) => ({
   ok: true,
   text: async () => {
     const request = String(requestPath);
+    if (request.includes('learning-guide-AI-workflow.md')) return aiWorkflow;
     if (request.includes('Day-wise-content.md')) return dayWise;
     if (request.includes('PDF-coverage-audit.md')) return audit;
     return markdown;
@@ -18,7 +20,7 @@ global.fetch = async (requestPath) => ({
 (async () => {
   const moduleUrl = pathToFileURL(path.join(process.cwd(), 'js', 'v2-renderer.js')).href;
   const { renderPage } = await import(moduleUrl);
-  const pages = ['index.html', 'week1.html', 'week8.html', 'assignments.html', 'references.html'];
+  const pages = ['index.html', 'week1.html', 'week8.html', 'assignments.html', 'references.html', 'ai-workflow.html', 'AI-workflow.html'];
   const outputs = {};
   for (const page of pages) {
     const root = { innerHTML: '' };
@@ -40,6 +42,10 @@ global.fetch = async (requestPath) => ({
     ['week1 renders parsed day-wise sections', outputs['week1.html'].includes('study-tab-section')],
     ['global codex bot shell renders', outputs['index.html'].includes('codex-bot-shell') && outputs['week1.html'].includes('codex-bot-shell')],
     ['timer widget removed from week pages', !outputs['week1.html'].includes('timer-widget')],
+    ['ai workflow page renders hero', outputs['ai-workflow.html'].includes('AI-Powered <span class="text-gradient">Design Workflow</span>')],
+    ['ai workflow page renders modules', outputs['ai-workflow.html'].includes('Module 1: Set Up The AI Design Environment')],
+    ['ai workflow page includes sidebar nav', outputs['ai-workflow.html'].includes('ai-workflow-toc-link')],
+    ['ai workflow route is case tolerant', outputs['AI-workflow.html'].includes('AI-Powered <span class="text-gradient">Design Workflow</span>')],
   ];
 
   let failed = false;
